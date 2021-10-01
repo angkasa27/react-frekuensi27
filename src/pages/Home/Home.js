@@ -19,12 +19,14 @@ export default function Home() {
 
 export function Sect1() {
   const [textClass, setTextClass] = useState(" opacity-0");
+  const [grainEff, setGrainEff] = useState(" ");
   const desc = ["FREKUENSI 27", "MOKLET'S FREQUENCY", "THE LEGEND"];
 
   useEffect(() => {
     setTimeout(() => {
       setTextClass(" animate-blink");
     }, 1800);
+    setGrainEff("animate-grain");
   }, []);
 
   const blobs = (
@@ -33,7 +35,9 @@ export function Sect1() {
         draggable="false"
         src={Grain}
         alt=""
-        className="z-0 absolute top-0 left-0 animate-grain opacity-60 md:h-auto h-screen"
+        className={
+          "z-0 absolute top-0 left-0 opacity-80 md:h-auto h-screen " + grainEff
+        }
       />
       <img
         draggable="false"
@@ -79,7 +83,7 @@ export function Sect1() {
       <div className="flex flex-col items-center justify-center h-screen">
         <p className="text-white h1 mb-6 animate-blink z-10">WE ARE</p>
         <Logo />
-        <p className={"text-white h1 mt-6 tracking-widest z-10 " + textClass}>
+        <p className={"text-white h1 mt-8 tracking-widest z-10 " + textClass}>
           <ReactTypingEffect
             speed={100}
             eraseSpeed={100}
@@ -123,7 +127,7 @@ export function Sect1() {
 export function Logo() {
   const [open, setOpen] = useState(false);
   const [logoClass, setLogoClass] = useState(" opacity-0");
-  const [logoText, setLogoText] = useState(" opacity-0");
+  const [logoText, setLogoText] = useState([" opacity-0", " opacity-0"]);
 
   useEffect(() => {
     setTimeout(() => {
@@ -131,19 +135,25 @@ export function Logo() {
     }, 1000);
   }, []);
 
-  useEffect(() => {
-    if (open) setLogoText("animate-smooth");
-    else {
-      setLogoText(" smoothOut");
+  const openMenu = (v) => {
+    if (!v) {
+      setLogoText([" animate-lineReverse", " animate-line"]);
       setTimeout(() => {
-        setLogoClass(" opacity-0");
-      }, 1000);
+        setLogoText([" ", " "]);
+      }, 200);
+    } else {
+      console.log("ts");
+      setLogoText([" animate-lineReverseOut", " animate-lineOut"]);
+      setTimeout(() => {
+        setLogoText([" opacity-0", " opacity-0"]);
+      }, 200);
     }
-  }, [open]);
+    setOpen(!v);
+  };
 
   const logo = (
     <div
-      onClick={() => setOpen(!open)}
+      onClick={() => openMenu(open)}
       className="transition cursor-pointer duration-500 ease-in-out transform hover:rotate-3 hover:scale-110"
     >
       <div className={"relative w-20 md:w-40 h-24 md:h-48 " + logoClass}>
@@ -160,14 +170,17 @@ export function Logo() {
     <div className="flex justify-center items-center z-10">
       <div
         className={
-          "w-16 h-16 border-2 left-0 border-white rounded-full " + logoText
+          "w-16 h-16 border-2 left-0 border-white rounded-full mr-24 hidden md:block " +
+          logoText[0]
         }
       ></div>
-      <div className="w-16 border border-white ml-8 mr-8" />
       {logo}
-      <div className="w-16 border border-white ml-8 mr-8" />
-
-      <div className="w-16 h-16 border-2 left-0 border-white rounded-full"></div>
+      <div
+        className={
+          "w-16 h-16 border-2 left-0 border-white rounded-full ml-24 hidden md:block " +
+          logoText[1]
+        }
+      ></div>
     </div>
   );
 }

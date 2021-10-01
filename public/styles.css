@@ -2172,7 +2172,6 @@ video {
 
 .appearance-none{
   -webkit-appearance: none;
-     -moz-appearance: none;
           appearance: none;
 }
 
@@ -14443,13 +14442,11 @@ video {
 
 .max-w-min{
   max-width: -webkit-min-content;
-  max-width: -moz-min-content;
   max-width: min-content;
 }
 
 .max-w-max{
   max-width: -webkit-max-content;
-  max-width: -moz-max-content;
   max-width: max-content;
 }
 
@@ -14499,13 +14496,11 @@ video {
 
 .min-w-min{
   min-width: -webkit-min-content;
-  min-width: -moz-min-content;
   min-width: min-content;
 }
 
 .min-w-max{
   min-width: -webkit-max-content;
-  min-width: -moz-max-content;
   min-width: max-content;
 }
 
@@ -19090,7 +19085,6 @@ video {
 }
 
 .sticky{
-  position: -webkit-sticky;
   position: sticky;
 }
 
@@ -28502,13 +28496,11 @@ video {
 
 .w-min{
   width: -webkit-min-content;
-  width: -moz-min-content;
   width: min-content;
 }
 
 .w-max{
   width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
 }
 
@@ -29507,7 +29499,8 @@ video {
   --tw-skew-y: 0;
   --tw-scale-x: 1;
   --tw-scale-y: 1;
-  transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  -webkit-transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+          transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .transform-gpu{
@@ -29518,47 +29511,58 @@ video {
   --tw-skew-y: 0;
   --tw-scale-x: 1;
   --tw-scale-y: 1;
-  transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  -webkit-transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+          transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .transform-none{
-  transform: none;
+  -webkit-transform: none;
+          transform: none;
 }
 
 .origin-center{
-  transform-origin: center;
+  -webkit-transform-origin: center;
+          transform-origin: center;
 }
 
 .origin-top{
-  transform-origin: top;
+  -webkit-transform-origin: top;
+          transform-origin: top;
 }
 
 .origin-top-right{
-  transform-origin: top right;
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
 }
 
 .origin-right{
-  transform-origin: right;
+  -webkit-transform-origin: right;
+          transform-origin: right;
 }
 
 .origin-bottom-right{
-  transform-origin: bottom right;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
 }
 
 .origin-bottom{
-  transform-origin: bottom;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
 }
 
 .origin-bottom-left{
-  transform-origin: bottom left;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
 }
 
 .origin-left{
-  transform-origin: left;
+  -webkit-transform-origin: left;
+          transform-origin: left;
 }
 
 .origin-top-left{
-  transform-origin: top left;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
 }
 
 .scale-0{
@@ -32794,7 +32798,9 @@ video {
 }
 
 .transition{
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, -webkit-transform;
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, -webkit-transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -32818,7 +32824,9 @@ video {
 }
 
 .transition-transform{
+  transition-property: -webkit-transform;
   transition-property: transform;
+  transition-property: transform, -webkit-transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -32903,16 +32911,39 @@ video {
   transition-delay: 1000ms;
 }
 
+@-webkit-keyframes spin{
+  to{
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 @keyframes spin{
   to{
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes ping{
+  75%, 100%{
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 0;
   }
 }
 
 @keyframes ping{
   75%, 100%{
-    transform: scale(2);
+    -webkit-transform: scale(2);
+            transform: scale(2);
     opacity: 0;
+  }
+}
+
+@-webkit-keyframes pulse{
+  50%{
+    opacity: .5;
   }
 }
 
@@ -32922,15 +32953,81 @@ video {
   }
 }
 
-@keyframes bounce{
+@-webkit-keyframes bounce{
   0%, 100%{
-    transform: translateY(-25%);
-    animation-timing-function: cubic-bezier(0.8,0,1,1);
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%);
+    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
+            animation-timing-function: cubic-bezier(0.8,0,1,1);
   }
 
   50%{
-    transform: none;
-    animation-timing-function: cubic-bezier(0,0,0.2,1);
+    -webkit-transform: none;
+            transform: none;
+    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
+            animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+@keyframes bounce{
+  0%, 100%{
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%);
+    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
+            animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50%{
+    -webkit-transform: none;
+            transform: none;
+    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
+            animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+@-webkit-keyframes blink{
+  0%{
+    opacity: 0%;
+  }
+
+  10%{
+    opacity: 100%;
+  }
+
+  20%{
+    opacity: 0%;
+  }
+
+  30%{
+    opacity: 0%;
+  }
+
+  40%{
+    opacity: 100%;
+  }
+
+  50%{
+    opacity: 0%;
+  }
+
+  60%{
+    opacity: 0%;
+  }
+
+  70%{
+    opacity: 0%;
+  }
+
+  80%{
+    opacity: 0%;
+  }
+
+  90%{
+    opacity: 0%;
+  }
+
+  100%{
+    opacity: 100%;
   }
 }
 
@@ -32980,152 +33077,364 @@ video {
   }
 }
 
-@keyframes grain{
+@-webkit-keyframes grain{
   0%, 100%{
-    transform: translate(0, 0) scale(1.5);
+    -webkit-transform: translate(0, 0) scale(1.5);
+            transform: translate(0, 0) scale(1.5);
   }
 
   10%{
-    transform: translate(-3%, -5%) scale(1.5);
+    -webkit-transform: translate(-3%, -5%) scale(1.5);
+            transform: translate(-3%, -5%) scale(1.5);
   }
 
   20%{
-    transform: translate(-8%, 3%) scale(1.5);
+    -webkit-transform: translate(-8%, 3%) scale(1.5);
+            transform: translate(-8%, 3%) scale(1.5);
   }
 
   30%{
-    transform: translate(4%, -13%) scale(1.5);
+    -webkit-transform: translate(4%, -13%) scale(1.5);
+            transform: translate(4%, -13%) scale(1.5);
   }
 
   40%{
-    transform: translate(-3%, 13%) scale(1.5);
+    -webkit-transform: translate(-3%, 13%) scale(1.5);
+            transform: translate(-3%, 13%) scale(1.5);
   }
 
   50%{
-    transform: translate(-8%, 5%) scale(1.5);
+    -webkit-transform: translate(-8%, 5%) scale(1.5);
+            transform: translate(-8%, 5%) scale(1.5);
   }
 
   60%{
-    transform: translate(8%, 0%) scale(1.5);
+    -webkit-transform: translate(8%, 0%) scale(1.5);
+            transform: translate(8%, 0%) scale(1.5);
   }
 
   70%{
-    transform: translate(0%, 8%) scale(1.5);
+    -webkit-transform: translate(0%, 8%) scale(1.5);
+            transform: translate(0%, 8%) scale(1.5);
   }
 
   80%{
-    transform: translate(3%, -13%)  scale(1.5);
+    -webkit-transform: translate(3%, -13%)  scale(1.5);
+            transform: translate(3%, -13%)  scale(1.5);
   }
 
   90%{
-    transform: translate(-5%, 5%) scale(1.5);
+    -webkit-transform: translate(-5%, 5%) scale(1.5);
+            transform: translate(-5%, 5%) scale(1.5);
+  }
+}
+
+@keyframes grain{
+  0%, 100%{
+    -webkit-transform: translate(0, 0) scale(1.5);
+            transform: translate(0, 0) scale(1.5);
+  }
+
+  10%{
+    -webkit-transform: translate(-3%, -5%) scale(1.5);
+            transform: translate(-3%, -5%) scale(1.5);
+  }
+
+  20%{
+    -webkit-transform: translate(-8%, 3%) scale(1.5);
+            transform: translate(-8%, 3%) scale(1.5);
+  }
+
+  30%{
+    -webkit-transform: translate(4%, -13%) scale(1.5);
+            transform: translate(4%, -13%) scale(1.5);
+  }
+
+  40%{
+    -webkit-transform: translate(-3%, 13%) scale(1.5);
+            transform: translate(-3%, 13%) scale(1.5);
+  }
+
+  50%{
+    -webkit-transform: translate(-8%, 5%) scale(1.5);
+            transform: translate(-8%, 5%) scale(1.5);
+  }
+
+  60%{
+    -webkit-transform: translate(8%, 0%) scale(1.5);
+            transform: translate(8%, 0%) scale(1.5);
+  }
+
+  70%{
+    -webkit-transform: translate(0%, 8%) scale(1.5);
+            transform: translate(0%, 8%) scale(1.5);
+  }
+
+  80%{
+    -webkit-transform: translate(3%, -13%)  scale(1.5);
+            transform: translate(3%, -13%)  scale(1.5);
+  }
+
+  90%{
+    -webkit-transform: translate(-5%, 5%) scale(1.5);
+            transform: translate(-5%, 5%) scale(1.5);
+  }
+}
+
+@-webkit-keyframes smooth{
+  0%{
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+
+  70%{
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+
+  100%{
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
 @keyframes smooth{
   0%{
-    transform: scale(0);
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+
+  70%{
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
 
   100%{
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes line{
+  0%{
+    -webkit-transform: translate(-8rem, 0) scale(0);
+            transform: translate(-8rem, 0) scale(0);
+  }
+
+  100%{
+    -webkit-transform: translate(0, 0) scale(1);
+            transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes line{
+  0%{
+    -webkit-transform: translate(-8rem, 0) scale(0);
+            transform: translate(-8rem, 0) scale(0);
+  }
+
+  100%{
+    -webkit-transform: translate(0, 0) scale(1);
+            transform: translate(0, 0) scale(1);
+  }
+}
+
+@-webkit-keyframes lineReverse{
+  0%{
+    -webkit-transform: translate(8rem, 0) scale(0);
+            transform: translate(8rem, 0) scale(0);
+  }
+
+  100%{
+    -webkit-transform: translate(0, 0) scale(1);
+            transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes lineReverse{
+  0%{
+    -webkit-transform: translate(8rem, 0) scale(0);
+            transform: translate(8rem, 0) scale(0);
+  }
+
+  100%{
+    -webkit-transform: translate(0, 0) scale(1);
+            transform: translate(0, 0) scale(1);
   }
 }
 
 .animate-none{
-  animation: none;
+  -webkit-animation: none;
+          animation: none;
 }
 
 .animate-spin{
-  animation: spin 1s linear infinite;
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
 }
 
 .animate-ping{
-  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+          animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
 
 .animate-pulse{
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+          animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 .animate-bounce{
-  animation: bounce 1s infinite;
+  -webkit-animation: bounce 1s infinite;
+          animation: bounce 1s infinite;
 }
 
 .animate-blink{
-  animation: blink .5s ease-in-out;
+  -webkit-animation: blink .5s ease-in-out;
+          animation: blink .5s ease-in-out;
 }
 
 .animate-grain{
-  animation: grain .5s steps(10) infinite;
+  -webkit-animation: grain .5s steps(10) infinite;
+          animation: grain .5s steps(10) infinite;
 }
 
 .animate-smooth{
-  animation: smooth .5s linear;
+  -webkit-animation: smooth .5s linear;
+          animation: smooth .5s linear;
+}
+
+.animate-line{
+  -webkit-animation: line .2s linear;
+          animation: line .2s linear;
+}
+
+.animate-lineReverse{
+  -webkit-animation: lineReverse .2s linear;
+          animation: lineReverse .2s linear;
+}
+
+.animate-lineOut{
+  animation: line .2s linear reverse;
+}
+
+.animate-lineReverseOut{
+  animation: lineReverse .2s linear reverse;
 }
 
 .hover\:animate-none:hover{
-  animation: none;
+  -webkit-animation: none;
+          animation: none;
 }
 
 .hover\:animate-spin:hover{
-  animation: spin 1s linear infinite;
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
 }
 
 .hover\:animate-ping:hover{
-  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+          animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
 
 .hover\:animate-pulse:hover{
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+          animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 .hover\:animate-bounce:hover{
-  animation: bounce 1s infinite;
+  -webkit-animation: bounce 1s infinite;
+          animation: bounce 1s infinite;
 }
 
 .hover\:animate-blink:hover{
-  animation: blink .5s ease-in-out;
+  -webkit-animation: blink .5s ease-in-out;
+          animation: blink .5s ease-in-out;
 }
 
 .hover\:animate-grain:hover{
-  animation: grain .5s steps(10) infinite;
+  -webkit-animation: grain .5s steps(10) infinite;
+          animation: grain .5s steps(10) infinite;
 }
 
 .hover\:animate-smooth:hover{
-  animation: smooth .5s linear;
+  -webkit-animation: smooth .5s linear;
+          animation: smooth .5s linear;
+}
+
+.hover\:animate-line:hover{
+  -webkit-animation: line .2s linear;
+          animation: line .2s linear;
+}
+
+.hover\:animate-lineReverse:hover{
+  -webkit-animation: lineReverse .2s linear;
+          animation: lineReverse .2s linear;
+}
+
+.hover\:animate-lineOut:hover{
+  animation: line .2s linear reverse;
+}
+
+.hover\:animate-lineReverseOut:hover{
+  animation: lineReverse .2s linear reverse;
 }
 
 .focus\:animate-none:focus{
-  animation: none;
+  -webkit-animation: none;
+          animation: none;
 }
 
 .focus\:animate-spin:focus{
-  animation: spin 1s linear infinite;
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
 }
 
 .focus\:animate-ping:focus{
-  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+          animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
 
 .focus\:animate-pulse:focus{
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+          animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 .focus\:animate-bounce:focus{
-  animation: bounce 1s infinite;
+  -webkit-animation: bounce 1s infinite;
+          animation: bounce 1s infinite;
 }
 
 .focus\:animate-blink:focus{
-  animation: blink .5s ease-in-out;
+  -webkit-animation: blink .5s ease-in-out;
+          animation: blink .5s ease-in-out;
 }
 
 .focus\:animate-grain:focus{
-  animation: grain .5s steps(10) infinite;
+  -webkit-animation: grain .5s steps(10) infinite;
+          animation: grain .5s steps(10) infinite;
 }
 
 .focus\:animate-smooth:focus{
-  animation: smooth .5s linear;
+  -webkit-animation: smooth .5s linear;
+          animation: smooth .5s linear;
+}
+
+.focus\:animate-line:focus{
+  -webkit-animation: line .2s linear;
+          animation: line .2s linear;
+}
+
+.focus\:animate-lineReverse:focus{
+  -webkit-animation: lineReverse .2s linear;
+          animation: lineReverse .2s linear;
+}
+
+.focus\:animate-lineOut:focus{
+  animation: line .2s linear reverse;
+}
+
+.focus\:animate-lineReverseOut:focus{
+  animation: lineReverse .2s linear reverse;
 }
 
 body {
@@ -34786,7 +35095,6 @@ body {
 
   .sm\:appearance-none{
     -webkit-appearance: none;
-       -moz-appearance: none;
             appearance: none;
   }
 
@@ -47057,13 +47365,11 @@ body {
 
   .sm\:max-w-min{
     max-width: -webkit-min-content;
-    max-width: -moz-min-content;
     max-width: min-content;
   }
 
   .sm\:max-w-max{
     max-width: -webkit-max-content;
-    max-width: -moz-max-content;
     max-width: max-content;
   }
 
@@ -47113,13 +47419,11 @@ body {
 
   .sm\:min-w-min{
     min-width: -webkit-min-content;
-    min-width: -moz-min-content;
     min-width: min-content;
   }
 
   .sm\:min-w-max{
     min-width: -webkit-max-content;
-    min-width: -moz-max-content;
     min-width: max-content;
   }
 
@@ -51704,7 +52008,6 @@ body {
   }
 
   .sm\:sticky{
-    position: -webkit-sticky;
     position: sticky;
   }
 
@@ -61103,13 +61406,11 @@ body {
 
   .sm\:w-min{
     width: -webkit-min-content;
-    width: -moz-min-content;
     width: min-content;
   }
 
   .sm\:w-max{
     width: -webkit-max-content;
-    width: -moz-max-content;
     width: max-content;
   }
 
@@ -62108,7 +62409,8 @@ body {
     --tw-skew-y: 0;
     --tw-scale-x: 1;
     --tw-scale-y: 1;
-    transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    -webkit-transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+            transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .sm\:transform-gpu{
@@ -62119,47 +62421,58 @@ body {
     --tw-skew-y: 0;
     --tw-scale-x: 1;
     --tw-scale-y: 1;
-    transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    -webkit-transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+            transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .sm\:transform-none{
-    transform: none;
+    -webkit-transform: none;
+            transform: none;
   }
 
   .sm\:origin-center{
-    transform-origin: center;
+    -webkit-transform-origin: center;
+            transform-origin: center;
   }
 
   .sm\:origin-top{
-    transform-origin: top;
+    -webkit-transform-origin: top;
+            transform-origin: top;
   }
 
   .sm\:origin-top-right{
-    transform-origin: top right;
+    -webkit-transform-origin: top right;
+            transform-origin: top right;
   }
 
   .sm\:origin-right{
-    transform-origin: right;
+    -webkit-transform-origin: right;
+            transform-origin: right;
   }
 
   .sm\:origin-bottom-right{
-    transform-origin: bottom right;
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
   }
 
   .sm\:origin-bottom{
-    transform-origin: bottom;
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
   }
 
   .sm\:origin-bottom-left{
-    transform-origin: bottom left;
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
   }
 
   .sm\:origin-left{
-    transform-origin: left;
+    -webkit-transform-origin: left;
+            transform-origin: left;
   }
 
   .sm\:origin-top-left{
-    transform-origin: top left;
+    -webkit-transform-origin: top left;
+            transform-origin: top left;
   }
 
   .sm\:scale-0{
@@ -65395,7 +65708,9 @@ body {
   }
 
   .sm\:transition{
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, -webkit-transform;
     transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, -webkit-transform;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
   }
@@ -65419,7 +65734,9 @@ body {
   }
 
   .sm\:transition-transform{
+    transition-property: -webkit-transform;
     transition-property: transform;
+    transition-property: transform, -webkit-transform;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
   }
@@ -65505,99 +65822,177 @@ body {
   }
 
   .sm\:animate-none{
-    animation: none;
+    -webkit-animation: none;
+            animation: none;
   }
 
   .sm\:animate-spin{
-    animation: spin 1s linear infinite;
+    -webkit-animation: spin 1s linear infinite;
+            animation: spin 1s linear infinite;
   }
 
   .sm\:animate-ping{
-    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+            animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
   }
 
   .sm\:animate-pulse{
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 
   .sm\:animate-bounce{
-    animation: bounce 1s infinite;
+    -webkit-animation: bounce 1s infinite;
+            animation: bounce 1s infinite;
   }
 
   .sm\:animate-blink{
-    animation: blink .5s ease-in-out;
+    -webkit-animation: blink .5s ease-in-out;
+            animation: blink .5s ease-in-out;
   }
 
   .sm\:animate-grain{
-    animation: grain .5s steps(10) infinite;
+    -webkit-animation: grain .5s steps(10) infinite;
+            animation: grain .5s steps(10) infinite;
   }
 
   .sm\:animate-smooth{
-    animation: smooth .5s linear;
+    -webkit-animation: smooth .5s linear;
+            animation: smooth .5s linear;
+  }
+
+  .sm\:animate-line{
+    -webkit-animation: line .2s linear;
+            animation: line .2s linear;
+  }
+
+  .sm\:animate-lineReverse{
+    -webkit-animation: lineReverse .2s linear;
+            animation: lineReverse .2s linear;
+  }
+
+  .sm\:animate-lineOut{
+    animation: line .2s linear reverse;
+  }
+
+  .sm\:animate-lineReverseOut{
+    animation: lineReverse .2s linear reverse;
   }
 
   .sm\:hover\:animate-none:hover{
-    animation: none;
+    -webkit-animation: none;
+            animation: none;
   }
 
   .sm\:hover\:animate-spin:hover{
-    animation: spin 1s linear infinite;
+    -webkit-animation: spin 1s linear infinite;
+            animation: spin 1s linear infinite;
   }
 
   .sm\:hover\:animate-ping:hover{
-    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+            animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
   }
 
   .sm\:hover\:animate-pulse:hover{
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 
   .sm\:hover\:animate-bounce:hover{
-    animation: bounce 1s infinite;
+    -webkit-animation: bounce 1s infinite;
+            animation: bounce 1s infinite;
   }
 
   .sm\:hover\:animate-blink:hover{
-    animation: blink .5s ease-in-out;
+    -webkit-animation: blink .5s ease-in-out;
+            animation: blink .5s ease-in-out;
   }
 
   .sm\:hover\:animate-grain:hover{
-    animation: grain .5s steps(10) infinite;
+    -webkit-animation: grain .5s steps(10) infinite;
+            animation: grain .5s steps(10) infinite;
   }
 
   .sm\:hover\:animate-smooth:hover{
-    animation: smooth .5s linear;
+    -webkit-animation: smooth .5s linear;
+            animation: smooth .5s linear;
+  }
+
+  .sm\:hover\:animate-line:hover{
+    -webkit-animation: line .2s linear;
+            animation: line .2s linear;
+  }
+
+  .sm\:hover\:animate-lineReverse:hover{
+    -webkit-animation: lineReverse .2s linear;
+            animation: lineReverse .2s linear;
+  }
+
+  .sm\:hover\:animate-lineOut:hover{
+    animation: line .2s linear reverse;
+  }
+
+  .sm\:hover\:animate-lineReverseOut:hover{
+    animation: lineReverse .2s linear reverse;
   }
 
   .sm\:focus\:animate-none:focus{
-    animation: none;
+    -webkit-animation: none;
+            animation: none;
   }
 
   .sm\:focus\:animate-spin:focus{
-    animation: spin 1s linear infinite;
+    -webkit-animation: spin 1s linear infinite;
+            animation: spin 1s linear infinite;
   }
 
   .sm\:focus\:animate-ping:focus{
-    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+            animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
   }
 
   .sm\:focus\:animate-pulse:focus{
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 
   .sm\:focus\:animate-bounce:focus{
-    animation: bounce 1s infinite;
+    -webkit-animation: bounce 1s infinite;
+            animation: bounce 1s infinite;
   }
 
   .sm\:focus\:animate-blink:focus{
-    animation: blink .5s ease-in-out;
+    -webkit-animation: blink .5s ease-in-out;
+            animation: blink .5s ease-in-out;
   }
 
   .sm\:focus\:animate-grain:focus{
-    animation: grain .5s steps(10) infinite;
+    -webkit-animation: grain .5s steps(10) infinite;
+            animation: grain .5s steps(10) infinite;
   }
 
   .sm\:focus\:animate-smooth:focus{
-    animation: smooth .5s linear;
+    -webkit-animation: smooth .5s linear;
+            animation: smooth .5s linear;
+  }
+
+  .sm\:focus\:animate-line:focus{
+    -webkit-animation: line .2s linear;
+            animation: line .2s linear;
+  }
+
+  .sm\:focus\:animate-lineReverse:focus{
+    -webkit-animation: lineReverse .2s linear;
+            animation: lineReverse .2s linear;
+  }
+
+  .sm\:focus\:animate-lineOut:focus{
+    animation: line .2s linear reverse;
+  }
+
+  .sm\:focus\:animate-lineReverseOut:focus{
+    animation: lineReverse .2s linear reverse;
   }
 }
 
@@ -67222,7 +67617,6 @@ body {
 
   .md\:appearance-none{
     -webkit-appearance: none;
-       -moz-appearance: none;
             appearance: none;
   }
 
@@ -79493,13 +79887,11 @@ body {
 
   .md\:max-w-min{
     max-width: -webkit-min-content;
-    max-width: -moz-min-content;
     max-width: min-content;
   }
 
   .md\:max-w-max{
     max-width: -webkit-max-content;
-    max-width: -moz-max-content;
     max-width: max-content;
   }
 
@@ -79549,13 +79941,11 @@ body {
 
   .md\:min-w-min{
     min-width: -webkit-min-content;
-    min-width: -moz-min-content;
     min-width: min-content;
   }
 
   .md\:min-w-max{
     min-width: -webkit-max-content;
-    min-width: -moz-max-content;
     min-width: max-content;
   }
 
@@ -84140,7 +84530,6 @@ body {
   }
 
   .md\:sticky{
-    position: -webkit-sticky;
     position: sticky;
   }
 
@@ -93539,13 +93928,11 @@ body {
 
   .md\:w-min{
     width: -webkit-min-content;
-    width: -moz-min-content;
     width: min-content;
   }
 
   .md\:w-max{
     width: -webkit-max-content;
-    width: -moz-max-content;
     width: max-content;
   }
 
@@ -94544,7 +94931,8 @@ body {
     --tw-skew-y: 0;
     --tw-scale-x: 1;
     --tw-scale-y: 1;
-    transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    -webkit-transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+            transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .md\:transform-gpu{
@@ -94555,47 +94943,58 @@ body {
     --tw-skew-y: 0;
     --tw-scale-x: 1;
     --tw-scale-y: 1;
-    transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    -webkit-transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+            transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .md\:transform-none{
-    transform: none;
+    -webkit-transform: none;
+            transform: none;
   }
 
   .md\:origin-center{
-    transform-origin: center;
+    -webkit-transform-origin: center;
+            transform-origin: center;
   }
 
   .md\:origin-top{
-    transform-origin: top;
+    -webkit-transform-origin: top;
+            transform-origin: top;
   }
 
   .md\:origin-top-right{
-    transform-origin: top right;
+    -webkit-transform-origin: top right;
+            transform-origin: top right;
   }
 
   .md\:origin-right{
-    transform-origin: right;
+    -webkit-transform-origin: right;
+            transform-origin: right;
   }
 
   .md\:origin-bottom-right{
-    transform-origin: bottom right;
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
   }
 
   .md\:origin-bottom{
-    transform-origin: bottom;
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
   }
 
   .md\:origin-bottom-left{
-    transform-origin: bottom left;
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
   }
 
   .md\:origin-left{
-    transform-origin: left;
+    -webkit-transform-origin: left;
+            transform-origin: left;
   }
 
   .md\:origin-top-left{
-    transform-origin: top left;
+    -webkit-transform-origin: top left;
+            transform-origin: top left;
   }
 
   .md\:scale-0{
@@ -97831,7 +98230,9 @@ body {
   }
 
   .md\:transition{
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, -webkit-transform;
     transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, -webkit-transform;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
   }
@@ -97855,7 +98256,9 @@ body {
   }
 
   .md\:transition-transform{
+    transition-property: -webkit-transform;
     transition-property: transform;
+    transition-property: transform, -webkit-transform;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
   }
@@ -97941,99 +98344,177 @@ body {
   }
 
   .md\:animate-none{
-    animation: none;
+    -webkit-animation: none;
+            animation: none;
   }
 
   .md\:animate-spin{
-    animation: spin 1s linear infinite;
+    -webkit-animation: spin 1s linear infinite;
+            animation: spin 1s linear infinite;
   }
 
   .md\:animate-ping{
-    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+            animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
   }
 
   .md\:animate-pulse{
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 
   .md\:animate-bounce{
-    animation: bounce 1s infinite;
+    -webkit-animation: bounce 1s infinite;
+            animation: bounce 1s infinite;
   }
 
   .md\:animate-blink{
-    animation: blink .5s ease-in-out;
+    -webkit-animation: blink .5s ease-in-out;
+            animation: blink .5s ease-in-out;
   }
 
   .md\:animate-grain{
-    animation: grain .5s steps(10) infinite;
+    -webkit-animation: grain .5s steps(10) infinite;
+            animation: grain .5s steps(10) infinite;
   }
 
   .md\:animate-smooth{
-    animation: smooth .5s linear;
+    -webkit-animation: smooth .5s linear;
+            animation: smooth .5s linear;
+  }
+
+  .md\:animate-line{
+    -webkit-animation: line .2s linear;
+            animation: line .2s linear;
+  }
+
+  .md\:animate-lineReverse{
+    -webkit-animation: lineReverse .2s linear;
+            animation: lineReverse .2s linear;
+  }
+
+  .md\:animate-lineOut{
+    animation: line .2s linear reverse;
+  }
+
+  .md\:animate-lineReverseOut{
+    animation: lineReverse .2s linear reverse;
   }
 
   .md\:hover\:animate-none:hover{
-    animation: none;
+    -webkit-animation: none;
+            animation: none;
   }
 
   .md\:hover\:animate-spin:hover{
-    animation: spin 1s linear infinite;
+    -webkit-animation: spin 1s linear infinite;
+            animation: spin 1s linear infinite;
   }
 
   .md\:hover\:animate-ping:hover{
-    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+            animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
   }
 
   .md\:hover\:animate-pulse:hover{
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 
   .md\:hover\:animate-bounce:hover{
-    animation: bounce 1s infinite;
+    -webkit-animation: bounce 1s infinite;
+            animation: bounce 1s infinite;
   }
 
   .md\:hover\:animate-blink:hover{
-    animation: blink .5s ease-in-out;
+    -webkit-animation: blink .5s ease-in-out;
+            animation: blink .5s ease-in-out;
   }
 
   .md\:hover\:animate-grain:hover{
-    animation: grain .5s steps(10) infinite;
+    -webkit-animation: grain .5s steps(10) infinite;
+            animation: grain .5s steps(10) infinite;
   }
 
   .md\:hover\:animate-smooth:hover{
-    animation: smooth .5s linear;
+    -webkit-animation: smooth .5s linear;
+            animation: smooth .5s linear;
+  }
+
+  .md\:hover\:animate-line:hover{
+    -webkit-animation: line .2s linear;
+            animation: line .2s linear;
+  }
+
+  .md\:hover\:animate-lineReverse:hover{
+    -webkit-animation: lineReverse .2s linear;
+            animation: lineReverse .2s linear;
+  }
+
+  .md\:hover\:animate-lineOut:hover{
+    animation: line .2s linear reverse;
+  }
+
+  .md\:hover\:animate-lineReverseOut:hover{
+    animation: lineReverse .2s linear reverse;
   }
 
   .md\:focus\:animate-none:focus{
-    animation: none;
+    -webkit-animation: none;
+            animation: none;
   }
 
   .md\:focus\:animate-spin:focus{
-    animation: spin 1s linear infinite;
+    -webkit-animation: spin 1s linear infinite;
+            animation: spin 1s linear infinite;
   }
 
   .md\:focus\:animate-ping:focus{
-    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+            animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
   }
 
   .md\:focus\:animate-pulse:focus{
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 
   .md\:focus\:animate-bounce:focus{
-    animation: bounce 1s infinite;
+    -webkit-animation: bounce 1s infinite;
+            animation: bounce 1s infinite;
   }
 
   .md\:focus\:animate-blink:focus{
-    animation: blink .5s ease-in-out;
+    -webkit-animation: blink .5s ease-in-out;
+            animation: blink .5s ease-in-out;
   }
 
   .md\:focus\:animate-grain:focus{
-    animation: grain .5s steps(10) infinite;
+    -webkit-animation: grain .5s steps(10) infinite;
+            animation: grain .5s steps(10) infinite;
   }
 
   .md\:focus\:animate-smooth:focus{
-    animation: smooth .5s linear;
+    -webkit-animation: smooth .5s linear;
+            animation: smooth .5s linear;
+  }
+
+  .md\:focus\:animate-line:focus{
+    -webkit-animation: line .2s linear;
+            animation: line .2s linear;
+  }
+
+  .md\:focus\:animate-lineReverse:focus{
+    -webkit-animation: lineReverse .2s linear;
+            animation: lineReverse .2s linear;
+  }
+
+  .md\:focus\:animate-lineOut:focus{
+    animation: line .2s linear reverse;
+  }
+
+  .md\:focus\:animate-lineReverseOut:focus{
+    animation: lineReverse .2s linear reverse;
   }
 }
 
@@ -99658,7 +100139,6 @@ body {
 
   .lg\:appearance-none{
     -webkit-appearance: none;
-       -moz-appearance: none;
             appearance: none;
   }
 
@@ -111929,13 +112409,11 @@ body {
 
   .lg\:max-w-min{
     max-width: -webkit-min-content;
-    max-width: -moz-min-content;
     max-width: min-content;
   }
 
   .lg\:max-w-max{
     max-width: -webkit-max-content;
-    max-width: -moz-max-content;
     max-width: max-content;
   }
 
@@ -111985,13 +112463,11 @@ body {
 
   .lg\:min-w-min{
     min-width: -webkit-min-content;
-    min-width: -moz-min-content;
     min-width: min-content;
   }
 
   .lg\:min-w-max{
     min-width: -webkit-max-content;
-    min-width: -moz-max-content;
     min-width: max-content;
   }
 
@@ -116576,7 +117052,6 @@ body {
   }
 
   .lg\:sticky{
-    position: -webkit-sticky;
     position: sticky;
   }
 
@@ -125975,13 +126450,11 @@ body {
 
   .lg\:w-min{
     width: -webkit-min-content;
-    width: -moz-min-content;
     width: min-content;
   }
 
   .lg\:w-max{
     width: -webkit-max-content;
-    width: -moz-max-content;
     width: max-content;
   }
 
@@ -126980,7 +127453,8 @@ body {
     --tw-skew-y: 0;
     --tw-scale-x: 1;
     --tw-scale-y: 1;
-    transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    -webkit-transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+            transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .lg\:transform-gpu{
@@ -126991,47 +127465,58 @@ body {
     --tw-skew-y: 0;
     --tw-scale-x: 1;
     --tw-scale-y: 1;
-    transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    -webkit-transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+            transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .lg\:transform-none{
-    transform: none;
+    -webkit-transform: none;
+            transform: none;
   }
 
   .lg\:origin-center{
-    transform-origin: center;
+    -webkit-transform-origin: center;
+            transform-origin: center;
   }
 
   .lg\:origin-top{
-    transform-origin: top;
+    -webkit-transform-origin: top;
+            transform-origin: top;
   }
 
   .lg\:origin-top-right{
-    transform-origin: top right;
+    -webkit-transform-origin: top right;
+            transform-origin: top right;
   }
 
   .lg\:origin-right{
-    transform-origin: right;
+    -webkit-transform-origin: right;
+            transform-origin: right;
   }
 
   .lg\:origin-bottom-right{
-    transform-origin: bottom right;
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
   }
 
   .lg\:origin-bottom{
-    transform-origin: bottom;
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
   }
 
   .lg\:origin-bottom-left{
-    transform-origin: bottom left;
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
   }
 
   .lg\:origin-left{
-    transform-origin: left;
+    -webkit-transform-origin: left;
+            transform-origin: left;
   }
 
   .lg\:origin-top-left{
-    transform-origin: top left;
+    -webkit-transform-origin: top left;
+            transform-origin: top left;
   }
 
   .lg\:scale-0{
@@ -130267,7 +130752,9 @@ body {
   }
 
   .lg\:transition{
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, -webkit-transform;
     transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, -webkit-transform;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
   }
@@ -130291,7 +130778,9 @@ body {
   }
 
   .lg\:transition-transform{
+    transition-property: -webkit-transform;
     transition-property: transform;
+    transition-property: transform, -webkit-transform;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
   }
@@ -130377,99 +130866,177 @@ body {
   }
 
   .lg\:animate-none{
-    animation: none;
+    -webkit-animation: none;
+            animation: none;
   }
 
   .lg\:animate-spin{
-    animation: spin 1s linear infinite;
+    -webkit-animation: spin 1s linear infinite;
+            animation: spin 1s linear infinite;
   }
 
   .lg\:animate-ping{
-    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+            animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
   }
 
   .lg\:animate-pulse{
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 
   .lg\:animate-bounce{
-    animation: bounce 1s infinite;
+    -webkit-animation: bounce 1s infinite;
+            animation: bounce 1s infinite;
   }
 
   .lg\:animate-blink{
-    animation: blink .5s ease-in-out;
+    -webkit-animation: blink .5s ease-in-out;
+            animation: blink .5s ease-in-out;
   }
 
   .lg\:animate-grain{
-    animation: grain .5s steps(10) infinite;
+    -webkit-animation: grain .5s steps(10) infinite;
+            animation: grain .5s steps(10) infinite;
   }
 
   .lg\:animate-smooth{
-    animation: smooth .5s linear;
+    -webkit-animation: smooth .5s linear;
+            animation: smooth .5s linear;
+  }
+
+  .lg\:animate-line{
+    -webkit-animation: line .2s linear;
+            animation: line .2s linear;
+  }
+
+  .lg\:animate-lineReverse{
+    -webkit-animation: lineReverse .2s linear;
+            animation: lineReverse .2s linear;
+  }
+
+  .lg\:animate-lineOut{
+    animation: line .2s linear reverse;
+  }
+
+  .lg\:animate-lineReverseOut{
+    animation: lineReverse .2s linear reverse;
   }
 
   .lg\:hover\:animate-none:hover{
-    animation: none;
+    -webkit-animation: none;
+            animation: none;
   }
 
   .lg\:hover\:animate-spin:hover{
-    animation: spin 1s linear infinite;
+    -webkit-animation: spin 1s linear infinite;
+            animation: spin 1s linear infinite;
   }
 
   .lg\:hover\:animate-ping:hover{
-    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+            animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
   }
 
   .lg\:hover\:animate-pulse:hover{
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 
   .lg\:hover\:animate-bounce:hover{
-    animation: bounce 1s infinite;
+    -webkit-animation: bounce 1s infinite;
+            animation: bounce 1s infinite;
   }
 
   .lg\:hover\:animate-blink:hover{
-    animation: blink .5s ease-in-out;
+    -webkit-animation: blink .5s ease-in-out;
+            animation: blink .5s ease-in-out;
   }
 
   .lg\:hover\:animate-grain:hover{
-    animation: grain .5s steps(10) infinite;
+    -webkit-animation: grain .5s steps(10) infinite;
+            animation: grain .5s steps(10) infinite;
   }
 
   .lg\:hover\:animate-smooth:hover{
-    animation: smooth .5s linear;
+    -webkit-animation: smooth .5s linear;
+            animation: smooth .5s linear;
+  }
+
+  .lg\:hover\:animate-line:hover{
+    -webkit-animation: line .2s linear;
+            animation: line .2s linear;
+  }
+
+  .lg\:hover\:animate-lineReverse:hover{
+    -webkit-animation: lineReverse .2s linear;
+            animation: lineReverse .2s linear;
+  }
+
+  .lg\:hover\:animate-lineOut:hover{
+    animation: line .2s linear reverse;
+  }
+
+  .lg\:hover\:animate-lineReverseOut:hover{
+    animation: lineReverse .2s linear reverse;
   }
 
   .lg\:focus\:animate-none:focus{
-    animation: none;
+    -webkit-animation: none;
+            animation: none;
   }
 
   .lg\:focus\:animate-spin:focus{
-    animation: spin 1s linear infinite;
+    -webkit-animation: spin 1s linear infinite;
+            animation: spin 1s linear infinite;
   }
 
   .lg\:focus\:animate-ping:focus{
-    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+            animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
   }
 
   .lg\:focus\:animate-pulse:focus{
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 
   .lg\:focus\:animate-bounce:focus{
-    animation: bounce 1s infinite;
+    -webkit-animation: bounce 1s infinite;
+            animation: bounce 1s infinite;
   }
 
   .lg\:focus\:animate-blink:focus{
-    animation: blink .5s ease-in-out;
+    -webkit-animation: blink .5s ease-in-out;
+            animation: blink .5s ease-in-out;
   }
 
   .lg\:focus\:animate-grain:focus{
-    animation: grain .5s steps(10) infinite;
+    -webkit-animation: grain .5s steps(10) infinite;
+            animation: grain .5s steps(10) infinite;
   }
 
   .lg\:focus\:animate-smooth:focus{
-    animation: smooth .5s linear;
+    -webkit-animation: smooth .5s linear;
+            animation: smooth .5s linear;
+  }
+
+  .lg\:focus\:animate-line:focus{
+    -webkit-animation: line .2s linear;
+            animation: line .2s linear;
+  }
+
+  .lg\:focus\:animate-lineReverse:focus{
+    -webkit-animation: lineReverse .2s linear;
+            animation: lineReverse .2s linear;
+  }
+
+  .lg\:focus\:animate-lineOut:focus{
+    animation: line .2s linear reverse;
+  }
+
+  .lg\:focus\:animate-lineReverseOut:focus{
+    animation: lineReverse .2s linear reverse;
   }
 }
 
@@ -132094,7 +132661,6 @@ body {
 
   .xl\:appearance-none{
     -webkit-appearance: none;
-       -moz-appearance: none;
             appearance: none;
   }
 
@@ -144365,13 +144931,11 @@ body {
 
   .xl\:max-w-min{
     max-width: -webkit-min-content;
-    max-width: -moz-min-content;
     max-width: min-content;
   }
 
   .xl\:max-w-max{
     max-width: -webkit-max-content;
-    max-width: -moz-max-content;
     max-width: max-content;
   }
 
@@ -144421,13 +144985,11 @@ body {
 
   .xl\:min-w-min{
     min-width: -webkit-min-content;
-    min-width: -moz-min-content;
     min-width: min-content;
   }
 
   .xl\:min-w-max{
     min-width: -webkit-max-content;
-    min-width: -moz-max-content;
     min-width: max-content;
   }
 
@@ -149012,7 +149574,6 @@ body {
   }
 
   .xl\:sticky{
-    position: -webkit-sticky;
     position: sticky;
   }
 
@@ -158411,13 +158972,11 @@ body {
 
   .xl\:w-min{
     width: -webkit-min-content;
-    width: -moz-min-content;
     width: min-content;
   }
 
   .xl\:w-max{
     width: -webkit-max-content;
-    width: -moz-max-content;
     width: max-content;
   }
 
@@ -159416,7 +159975,8 @@ body {
     --tw-skew-y: 0;
     --tw-scale-x: 1;
     --tw-scale-y: 1;
-    transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    -webkit-transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+            transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .xl\:transform-gpu{
@@ -159427,47 +159987,58 @@ body {
     --tw-skew-y: 0;
     --tw-scale-x: 1;
     --tw-scale-y: 1;
-    transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    -webkit-transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+            transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .xl\:transform-none{
-    transform: none;
+    -webkit-transform: none;
+            transform: none;
   }
 
   .xl\:origin-center{
-    transform-origin: center;
+    -webkit-transform-origin: center;
+            transform-origin: center;
   }
 
   .xl\:origin-top{
-    transform-origin: top;
+    -webkit-transform-origin: top;
+            transform-origin: top;
   }
 
   .xl\:origin-top-right{
-    transform-origin: top right;
+    -webkit-transform-origin: top right;
+            transform-origin: top right;
   }
 
   .xl\:origin-right{
-    transform-origin: right;
+    -webkit-transform-origin: right;
+            transform-origin: right;
   }
 
   .xl\:origin-bottom-right{
-    transform-origin: bottom right;
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
   }
 
   .xl\:origin-bottom{
-    transform-origin: bottom;
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
   }
 
   .xl\:origin-bottom-left{
-    transform-origin: bottom left;
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
   }
 
   .xl\:origin-left{
-    transform-origin: left;
+    -webkit-transform-origin: left;
+            transform-origin: left;
   }
 
   .xl\:origin-top-left{
-    transform-origin: top left;
+    -webkit-transform-origin: top left;
+            transform-origin: top left;
   }
 
   .xl\:scale-0{
@@ -162703,7 +163274,9 @@ body {
   }
 
   .xl\:transition{
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, -webkit-transform;
     transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, -webkit-transform;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
   }
@@ -162727,7 +163300,9 @@ body {
   }
 
   .xl\:transition-transform{
+    transition-property: -webkit-transform;
     transition-property: transform;
+    transition-property: transform, -webkit-transform;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
   }
@@ -162813,99 +163388,177 @@ body {
   }
 
   .xl\:animate-none{
-    animation: none;
+    -webkit-animation: none;
+            animation: none;
   }
 
   .xl\:animate-spin{
-    animation: spin 1s linear infinite;
+    -webkit-animation: spin 1s linear infinite;
+            animation: spin 1s linear infinite;
   }
 
   .xl\:animate-ping{
-    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+            animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
   }
 
   .xl\:animate-pulse{
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 
   .xl\:animate-bounce{
-    animation: bounce 1s infinite;
+    -webkit-animation: bounce 1s infinite;
+            animation: bounce 1s infinite;
   }
 
   .xl\:animate-blink{
-    animation: blink .5s ease-in-out;
+    -webkit-animation: blink .5s ease-in-out;
+            animation: blink .5s ease-in-out;
   }
 
   .xl\:animate-grain{
-    animation: grain .5s steps(10) infinite;
+    -webkit-animation: grain .5s steps(10) infinite;
+            animation: grain .5s steps(10) infinite;
   }
 
   .xl\:animate-smooth{
-    animation: smooth .5s linear;
+    -webkit-animation: smooth .5s linear;
+            animation: smooth .5s linear;
+  }
+
+  .xl\:animate-line{
+    -webkit-animation: line .2s linear;
+            animation: line .2s linear;
+  }
+
+  .xl\:animate-lineReverse{
+    -webkit-animation: lineReverse .2s linear;
+            animation: lineReverse .2s linear;
+  }
+
+  .xl\:animate-lineOut{
+    animation: line .2s linear reverse;
+  }
+
+  .xl\:animate-lineReverseOut{
+    animation: lineReverse .2s linear reverse;
   }
 
   .xl\:hover\:animate-none:hover{
-    animation: none;
+    -webkit-animation: none;
+            animation: none;
   }
 
   .xl\:hover\:animate-spin:hover{
-    animation: spin 1s linear infinite;
+    -webkit-animation: spin 1s linear infinite;
+            animation: spin 1s linear infinite;
   }
 
   .xl\:hover\:animate-ping:hover{
-    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+            animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
   }
 
   .xl\:hover\:animate-pulse:hover{
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 
   .xl\:hover\:animate-bounce:hover{
-    animation: bounce 1s infinite;
+    -webkit-animation: bounce 1s infinite;
+            animation: bounce 1s infinite;
   }
 
   .xl\:hover\:animate-blink:hover{
-    animation: blink .5s ease-in-out;
+    -webkit-animation: blink .5s ease-in-out;
+            animation: blink .5s ease-in-out;
   }
 
   .xl\:hover\:animate-grain:hover{
-    animation: grain .5s steps(10) infinite;
+    -webkit-animation: grain .5s steps(10) infinite;
+            animation: grain .5s steps(10) infinite;
   }
 
   .xl\:hover\:animate-smooth:hover{
-    animation: smooth .5s linear;
+    -webkit-animation: smooth .5s linear;
+            animation: smooth .5s linear;
+  }
+
+  .xl\:hover\:animate-line:hover{
+    -webkit-animation: line .2s linear;
+            animation: line .2s linear;
+  }
+
+  .xl\:hover\:animate-lineReverse:hover{
+    -webkit-animation: lineReverse .2s linear;
+            animation: lineReverse .2s linear;
+  }
+
+  .xl\:hover\:animate-lineOut:hover{
+    animation: line .2s linear reverse;
+  }
+
+  .xl\:hover\:animate-lineReverseOut:hover{
+    animation: lineReverse .2s linear reverse;
   }
 
   .xl\:focus\:animate-none:focus{
-    animation: none;
+    -webkit-animation: none;
+            animation: none;
   }
 
   .xl\:focus\:animate-spin:focus{
-    animation: spin 1s linear infinite;
+    -webkit-animation: spin 1s linear infinite;
+            animation: spin 1s linear infinite;
   }
 
   .xl\:focus\:animate-ping:focus{
-    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+            animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
   }
 
   .xl\:focus\:animate-pulse:focus{
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 
   .xl\:focus\:animate-bounce:focus{
-    animation: bounce 1s infinite;
+    -webkit-animation: bounce 1s infinite;
+            animation: bounce 1s infinite;
   }
 
   .xl\:focus\:animate-blink:focus{
-    animation: blink .5s ease-in-out;
+    -webkit-animation: blink .5s ease-in-out;
+            animation: blink .5s ease-in-out;
   }
 
   .xl\:focus\:animate-grain:focus{
-    animation: grain .5s steps(10) infinite;
+    -webkit-animation: grain .5s steps(10) infinite;
+            animation: grain .5s steps(10) infinite;
   }
 
   .xl\:focus\:animate-smooth:focus{
-    animation: smooth .5s linear;
+    -webkit-animation: smooth .5s linear;
+            animation: smooth .5s linear;
+  }
+
+  .xl\:focus\:animate-line:focus{
+    -webkit-animation: line .2s linear;
+            animation: line .2s linear;
+  }
+
+  .xl\:focus\:animate-lineReverse:focus{
+    -webkit-animation: lineReverse .2s linear;
+            animation: lineReverse .2s linear;
+  }
+
+  .xl\:focus\:animate-lineOut:focus{
+    animation: line .2s linear reverse;
+  }
+
+  .xl\:focus\:animate-lineReverseOut:focus{
+    animation: lineReverse .2s linear reverse;
   }
 }
 
@@ -164530,7 +165183,6 @@ body {
 
   .\32xl\:appearance-none{
     -webkit-appearance: none;
-       -moz-appearance: none;
             appearance: none;
   }
 
@@ -176801,13 +177453,11 @@ body {
 
   .\32xl\:max-w-min{
     max-width: -webkit-min-content;
-    max-width: -moz-min-content;
     max-width: min-content;
   }
 
   .\32xl\:max-w-max{
     max-width: -webkit-max-content;
-    max-width: -moz-max-content;
     max-width: max-content;
   }
 
@@ -176857,13 +177507,11 @@ body {
 
   .\32xl\:min-w-min{
     min-width: -webkit-min-content;
-    min-width: -moz-min-content;
     min-width: min-content;
   }
 
   .\32xl\:min-w-max{
     min-width: -webkit-max-content;
-    min-width: -moz-max-content;
     min-width: max-content;
   }
 
@@ -181448,7 +182096,6 @@ body {
   }
 
   .\32xl\:sticky{
-    position: -webkit-sticky;
     position: sticky;
   }
 
@@ -190847,13 +191494,11 @@ body {
 
   .\32xl\:w-min{
     width: -webkit-min-content;
-    width: -moz-min-content;
     width: min-content;
   }
 
   .\32xl\:w-max{
     width: -webkit-max-content;
-    width: -moz-max-content;
     width: max-content;
   }
 
@@ -191852,7 +192497,8 @@ body {
     --tw-skew-y: 0;
     --tw-scale-x: 1;
     --tw-scale-y: 1;
-    transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    -webkit-transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+            transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .\32xl\:transform-gpu{
@@ -191863,47 +192509,58 @@ body {
     --tw-skew-y: 0;
     --tw-scale-x: 1;
     --tw-scale-y: 1;
-    transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    -webkit-transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+            transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .\32xl\:transform-none{
-    transform: none;
+    -webkit-transform: none;
+            transform: none;
   }
 
   .\32xl\:origin-center{
-    transform-origin: center;
+    -webkit-transform-origin: center;
+            transform-origin: center;
   }
 
   .\32xl\:origin-top{
-    transform-origin: top;
+    -webkit-transform-origin: top;
+            transform-origin: top;
   }
 
   .\32xl\:origin-top-right{
-    transform-origin: top right;
+    -webkit-transform-origin: top right;
+            transform-origin: top right;
   }
 
   .\32xl\:origin-right{
-    transform-origin: right;
+    -webkit-transform-origin: right;
+            transform-origin: right;
   }
 
   .\32xl\:origin-bottom-right{
-    transform-origin: bottom right;
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
   }
 
   .\32xl\:origin-bottom{
-    transform-origin: bottom;
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
   }
 
   .\32xl\:origin-bottom-left{
-    transform-origin: bottom left;
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
   }
 
   .\32xl\:origin-left{
-    transform-origin: left;
+    -webkit-transform-origin: left;
+            transform-origin: left;
   }
 
   .\32xl\:origin-top-left{
-    transform-origin: top left;
+    -webkit-transform-origin: top left;
+            transform-origin: top left;
   }
 
   .\32xl\:scale-0{
@@ -195139,7 +195796,9 @@ body {
   }
 
   .\32xl\:transition{
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, -webkit-transform;
     transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, -webkit-transform;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
   }
@@ -195163,7 +195822,9 @@ body {
   }
 
   .\32xl\:transition-transform{
+    transition-property: -webkit-transform;
     transition-property: transform;
+    transition-property: transform, -webkit-transform;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
   }
@@ -195249,98 +195910,176 @@ body {
   }
 
   .\32xl\:animate-none{
-    animation: none;
+    -webkit-animation: none;
+            animation: none;
   }
 
   .\32xl\:animate-spin{
-    animation: spin 1s linear infinite;
+    -webkit-animation: spin 1s linear infinite;
+            animation: spin 1s linear infinite;
   }
 
   .\32xl\:animate-ping{
-    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+            animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
   }
 
   .\32xl\:animate-pulse{
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 
   .\32xl\:animate-bounce{
-    animation: bounce 1s infinite;
+    -webkit-animation: bounce 1s infinite;
+            animation: bounce 1s infinite;
   }
 
   .\32xl\:animate-blink{
-    animation: blink .5s ease-in-out;
+    -webkit-animation: blink .5s ease-in-out;
+            animation: blink .5s ease-in-out;
   }
 
   .\32xl\:animate-grain{
-    animation: grain .5s steps(10) infinite;
+    -webkit-animation: grain .5s steps(10) infinite;
+            animation: grain .5s steps(10) infinite;
   }
 
   .\32xl\:animate-smooth{
-    animation: smooth .5s linear;
+    -webkit-animation: smooth .5s linear;
+            animation: smooth .5s linear;
+  }
+
+  .\32xl\:animate-line{
+    -webkit-animation: line .2s linear;
+            animation: line .2s linear;
+  }
+
+  .\32xl\:animate-lineReverse{
+    -webkit-animation: lineReverse .2s linear;
+            animation: lineReverse .2s linear;
+  }
+
+  .\32xl\:animate-lineOut{
+    animation: line .2s linear reverse;
+  }
+
+  .\32xl\:animate-lineReverseOut{
+    animation: lineReverse .2s linear reverse;
   }
 
   .\32xl\:hover\:animate-none:hover{
-    animation: none;
+    -webkit-animation: none;
+            animation: none;
   }
 
   .\32xl\:hover\:animate-spin:hover{
-    animation: spin 1s linear infinite;
+    -webkit-animation: spin 1s linear infinite;
+            animation: spin 1s linear infinite;
   }
 
   .\32xl\:hover\:animate-ping:hover{
-    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+            animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
   }
 
   .\32xl\:hover\:animate-pulse:hover{
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 
   .\32xl\:hover\:animate-bounce:hover{
-    animation: bounce 1s infinite;
+    -webkit-animation: bounce 1s infinite;
+            animation: bounce 1s infinite;
   }
 
   .\32xl\:hover\:animate-blink:hover{
-    animation: blink .5s ease-in-out;
+    -webkit-animation: blink .5s ease-in-out;
+            animation: blink .5s ease-in-out;
   }
 
   .\32xl\:hover\:animate-grain:hover{
-    animation: grain .5s steps(10) infinite;
+    -webkit-animation: grain .5s steps(10) infinite;
+            animation: grain .5s steps(10) infinite;
   }
 
   .\32xl\:hover\:animate-smooth:hover{
-    animation: smooth .5s linear;
+    -webkit-animation: smooth .5s linear;
+            animation: smooth .5s linear;
+  }
+
+  .\32xl\:hover\:animate-line:hover{
+    -webkit-animation: line .2s linear;
+            animation: line .2s linear;
+  }
+
+  .\32xl\:hover\:animate-lineReverse:hover{
+    -webkit-animation: lineReverse .2s linear;
+            animation: lineReverse .2s linear;
+  }
+
+  .\32xl\:hover\:animate-lineOut:hover{
+    animation: line .2s linear reverse;
+  }
+
+  .\32xl\:hover\:animate-lineReverseOut:hover{
+    animation: lineReverse .2s linear reverse;
   }
 
   .\32xl\:focus\:animate-none:focus{
-    animation: none;
+    -webkit-animation: none;
+            animation: none;
   }
 
   .\32xl\:focus\:animate-spin:focus{
-    animation: spin 1s linear infinite;
+    -webkit-animation: spin 1s linear infinite;
+            animation: spin 1s linear infinite;
   }
 
   .\32xl\:focus\:animate-ping:focus{
-    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+            animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
   }
 
   .\32xl\:focus\:animate-pulse:focus{
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 
   .\32xl\:focus\:animate-bounce:focus{
-    animation: bounce 1s infinite;
+    -webkit-animation: bounce 1s infinite;
+            animation: bounce 1s infinite;
   }
 
   .\32xl\:focus\:animate-blink:focus{
-    animation: blink .5s ease-in-out;
+    -webkit-animation: blink .5s ease-in-out;
+            animation: blink .5s ease-in-out;
   }
 
   .\32xl\:focus\:animate-grain:focus{
-    animation: grain .5s steps(10) infinite;
+    -webkit-animation: grain .5s steps(10) infinite;
+            animation: grain .5s steps(10) infinite;
   }
 
   .\32xl\:focus\:animate-smooth:focus{
-    animation: smooth .5s linear;
+    -webkit-animation: smooth .5s linear;
+            animation: smooth .5s linear;
+  }
+
+  .\32xl\:focus\:animate-line:focus{
+    -webkit-animation: line .2s linear;
+            animation: line .2s linear;
+  }
+
+  .\32xl\:focus\:animate-lineReverse:focus{
+    -webkit-animation: lineReverse .2s linear;
+            animation: lineReverse .2s linear;
+  }
+
+  .\32xl\:focus\:animate-lineOut:focus{
+    animation: line .2s linear reverse;
+  }
+
+  .\32xl\:focus\:animate-lineReverseOut:focus{
+    animation: lineReverse .2s linear reverse;
   }
 }

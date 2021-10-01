@@ -68,13 +68,26 @@ module.exports = {
         },
         smooth: {
           "0%": { transform: "scale(0)" },
+          "70%": { transform: "scale(0)" },
           "100%": { transform: "scale(1)" },
+        },
+        line: {
+          "0%": { transform: "translate(-8rem, 0) scale(0)" },
+          "100%": { transform: "translate(0, 0) scale(1)" },
+        },
+        lineReverse: {
+          "0%": { transform: "translate(8rem, 0) scale(0)" },
+          "100%": { transform: "translate(0, 0) scale(1)" },
         },
       },
       animation: {
         blink: "blink .5s ease-in-out",
         grain: "grain .5s steps(10) infinite",
         smooth: "smooth .5s linear",
+        line: "line .2s linear",
+        lineReverse: "lineReverse .2s linear",
+        lineOut: "line .2s linear reverse",
+        lineReverseOut: "lineReverse .2s linear reverse",
       },
       scale: {
         165: "1.65",
