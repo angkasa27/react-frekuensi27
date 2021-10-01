@@ -7,6 +7,7 @@ module.exports = {
         nunito: ["Nunito", "sans-serif"],
         bebas: ["Bebas Neue", "sans-serif"],
         work: ["Work Sans", "sans-serif"],
+        code: ["Fira Mono", "sans-serif"],
       },
       colors: {
         primary: "#D10606",
@@ -65,10 +66,15 @@ module.exports = {
           "80%": { transform: "translate(3%, -13%)  scale(1.5)" },
           "90%": { transform: "translate(-5%, 5%) scale(1.5)" },
         },
+        smooth: {
+          "0%": { transform: "scale(0)" },
+          "100%": { transform: "scale(1)" },
+        },
       },
       animation: {
         blink: "blink .5s ease-in-out",
         grain: "grain .5s steps(10) infinite",
+        smooth: "smooth .5s linear",
       },
       scale: {
         165: "1.65",

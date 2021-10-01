@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito&family=Work+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Mono&family=Nunito&family=Work+Sans&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,15 +8,6 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Nunito, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-/* Contoh */
-.card {
-  @apply overflow-hidden rounded-xl p-5 md:p-8  shadow-md hover:shadow-xl transition duration-300 ease-out;
-}
-
-.btn-main {
-  @apply bg-indigo-500 font-bold text-white rounded-lg py-1 px-2 focus:outline-none border border-indigo-500 hover:bg-indigo-700 transition duration-300 ease-out;
 }
 
 #sec0 {
@@ -31,4 +22,8 @@ body {
 
 .sec-base {
   @apply w-screen h-screen m-0 p-0;
+}
+
+.h1 {
+  @apply text-xl md:text-2xl font-black font-work;
 }

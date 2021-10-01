@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito&family=Work+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Mono&family=Nunito&family=Work+Sans&display=swap");
 
 /*! tailwindcss v2.0.3 | MIT License | https://tailwindcss.com */
 
@@ -11428,6 +11428,10 @@ video {
 
 .font-work{
   font-family: Work Sans, sans-serif;
+}
+
+.font-code{
+  font-family: Fira Mono, sans-serif;
 }
 
 .font-thin{
@@ -33018,6 +33022,16 @@ video {
   }
 }
 
+@keyframes smooth{
+  0%{
+    transform: scale(0);
+  }
+
+  100%{
+    transform: scale(1);
+  }
+}
+
 .animate-none{
   animation: none;
 }
@@ -33044,6 +33058,10 @@ video {
 
 .animate-grain{
   animation: grain .5s steps(10) infinite;
+}
+
+.animate-smooth{
+  animation: smooth .5s linear;
 }
 
 .hover\:animate-none:hover{
@@ -33074,6 +33092,10 @@ video {
   animation: grain .5s steps(10) infinite;
 }
 
+.hover\:animate-smooth:hover{
+  animation: smooth .5s linear;
+}
+
 .focus\:animate-none:focus{
   animation: none;
 }
@@ -33102,77 +33124,15 @@ video {
   animation: grain .5s steps(10) infinite;
 }
 
+.focus\:animate-smooth:focus{
+  animation: smooth .5s linear;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Nunito, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-/* Contoh */
-
-.card {
-  border-radius: 0.75rem;
-  overflow: hidden;
-  padding: 1.25rem;
-  --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.card:hover{
-  --tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.card{
-  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  transition-duration: 300ms;
-}
-
-@media (min-width: 768px){
-  .card{
-    padding: 2rem;
-  }
-}
-
-.btn-main {
-  --tw-bg-opacity: 1;
-  background-color: rgba(99, 102, 241, var(--tw-bg-opacity));
-}
-
-.btn-main:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgba(67, 56, 202, var(--tw-bg-opacity));
-}
-
-.btn-main{
-  --tw-border-opacity: 1;
-  border-color: rgba(99, 102, 241, var(--tw-border-opacity));
-  border-radius: 0.5rem;
-  border-width: 1px;
-  font-weight: 700;
-}
-
-.btn-main:focus{
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
-
-.btn-main{
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
-  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  transition-duration: 300ms;
 }
 
 #sec0 {
@@ -33189,6 +33149,20 @@ body {
   margin: 0px;
   padding: 0px;
   width: 100vw;
+}
+
+.h1 {
+  font-family: Work Sans, sans-serif;
+  font-weight: 900;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+@media (min-width: 768px){
+  .h1{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }
 
 @media (min-width: 640px){
@@ -44068,6 +44042,10 @@ body {
 
   .sm\:font-work{
     font-family: Work Sans, sans-serif;
+  }
+
+  .sm\:font-code{
+    font-family: Fira Mono, sans-serif;
   }
 
   .sm\:font-thin{
@@ -65554,6 +65532,10 @@ body {
     animation: grain .5s steps(10) infinite;
   }
 
+  .sm\:animate-smooth{
+    animation: smooth .5s linear;
+  }
+
   .sm\:hover\:animate-none:hover{
     animation: none;
   }
@@ -65582,6 +65564,10 @@ body {
     animation: grain .5s steps(10) infinite;
   }
 
+  .sm\:hover\:animate-smooth:hover{
+    animation: smooth .5s linear;
+  }
+
   .sm\:focus\:animate-none:focus{
     animation: none;
   }
@@ -65608,6 +65594,10 @@ body {
 
   .sm\:focus\:animate-grain:focus{
     animation: grain .5s steps(10) infinite;
+  }
+
+  .sm\:focus\:animate-smooth:focus{
+    animation: smooth .5s linear;
   }
 }
 
@@ -76488,6 +76478,10 @@ body {
 
   .md\:font-work{
     font-family: Work Sans, sans-serif;
+  }
+
+  .md\:font-code{
+    font-family: Fira Mono, sans-serif;
   }
 
   .md\:font-thin{
@@ -97974,6 +97968,10 @@ body {
     animation: grain .5s steps(10) infinite;
   }
 
+  .md\:animate-smooth{
+    animation: smooth .5s linear;
+  }
+
   .md\:hover\:animate-none:hover{
     animation: none;
   }
@@ -98002,6 +98000,10 @@ body {
     animation: grain .5s steps(10) infinite;
   }
 
+  .md\:hover\:animate-smooth:hover{
+    animation: smooth .5s linear;
+  }
+
   .md\:focus\:animate-none:focus{
     animation: none;
   }
@@ -98028,6 +98030,10 @@ body {
 
   .md\:focus\:animate-grain:focus{
     animation: grain .5s steps(10) infinite;
+  }
+
+  .md\:focus\:animate-smooth:focus{
+    animation: smooth .5s linear;
   }
 }
 
@@ -108908,6 +108914,10 @@ body {
 
   .lg\:font-work{
     font-family: Work Sans, sans-serif;
+  }
+
+  .lg\:font-code{
+    font-family: Fira Mono, sans-serif;
   }
 
   .lg\:font-thin{
@@ -130394,6 +130404,10 @@ body {
     animation: grain .5s steps(10) infinite;
   }
 
+  .lg\:animate-smooth{
+    animation: smooth .5s linear;
+  }
+
   .lg\:hover\:animate-none:hover{
     animation: none;
   }
@@ -130422,6 +130436,10 @@ body {
     animation: grain .5s steps(10) infinite;
   }
 
+  .lg\:hover\:animate-smooth:hover{
+    animation: smooth .5s linear;
+  }
+
   .lg\:focus\:animate-none:focus{
     animation: none;
   }
@@ -130448,6 +130466,10 @@ body {
 
   .lg\:focus\:animate-grain:focus{
     animation: grain .5s steps(10) infinite;
+  }
+
+  .lg\:focus\:animate-smooth:focus{
+    animation: smooth .5s linear;
   }
 }
 
@@ -141328,6 +141350,10 @@ body {
 
   .xl\:font-work{
     font-family: Work Sans, sans-serif;
+  }
+
+  .xl\:font-code{
+    font-family: Fira Mono, sans-serif;
   }
 
   .xl\:font-thin{
@@ -162814,6 +162840,10 @@ body {
     animation: grain .5s steps(10) infinite;
   }
 
+  .xl\:animate-smooth{
+    animation: smooth .5s linear;
+  }
+
   .xl\:hover\:animate-none:hover{
     animation: none;
   }
@@ -162842,6 +162872,10 @@ body {
     animation: grain .5s steps(10) infinite;
   }
 
+  .xl\:hover\:animate-smooth:hover{
+    animation: smooth .5s linear;
+  }
+
   .xl\:focus\:animate-none:focus{
     animation: none;
   }
@@ -162868,6 +162902,10 @@ body {
 
   .xl\:focus\:animate-grain:focus{
     animation: grain .5s steps(10) infinite;
+  }
+
+  .xl\:focus\:animate-smooth:focus{
+    animation: smooth .5s linear;
   }
 }
 
@@ -173748,6 +173786,10 @@ body {
 
   .\32xl\:font-work{
     font-family: Work Sans, sans-serif;
+  }
+
+  .\32xl\:font-code{
+    font-family: Fira Mono, sans-serif;
   }
 
   .\32xl\:font-thin{
@@ -195234,6 +195276,10 @@ body {
     animation: grain .5s steps(10) infinite;
   }
 
+  .\32xl\:animate-smooth{
+    animation: smooth .5s linear;
+  }
+
   .\32xl\:hover\:animate-none:hover{
     animation: none;
   }
@@ -195262,6 +195308,10 @@ body {
     animation: grain .5s steps(10) infinite;
   }
 
+  .\32xl\:hover\:animate-smooth:hover{
+    animation: smooth .5s linear;
+  }
+
   .\32xl\:focus\:animate-none:focus{
     animation: none;
   }
@@ -195288,5 +195338,9 @@ body {
 
   .\32xl\:focus\:animate-grain:focus{
     animation: grain .5s steps(10) infinite;
+  }
+
+  .\32xl\:focus\:animate-smooth:focus{
+    animation: smooth .5s linear;
   }
 }
