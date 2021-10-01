@@ -8,7 +8,7 @@ export default function App() {
     <div className=" bg-fixed bg-gray-50 bg-cover  text-gray-600">
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/react-frekuensi27" component={Home} />
+        <Route exact path="/react-rekuensi27/" component={Home} />
       </Switch>
     </div>
   );
