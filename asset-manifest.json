@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/react-frekuensi27/static/css/main.ec52af80.chunk.css",
-    "main.js": "/react-frekuensi27/static/js/main.d7788c1e.chunk.js",
-    "main.js.map": "/react-frekuensi27/static/js/main.d7788c1e.chunk.js.map",
+    "main.css": "/react-frekuensi27/static/css/main.f1ba09b2.chunk.css",
+    "main.js": "/react-frekuensi27/static/js/main.a650928f.chunk.js",
+    "main.js.map": "/react-frekuensi27/static/js/main.a650928f.chunk.js.map",
     "runtime-main.js": "/react-frekuensi27/static/js/runtime-main.80feef7c.js",
     "runtime-main.js.map": "/react-frekuensi27/static/js/runtime-main.80feef7c.js.map",
-    "static/js/2.8fff74ed.chunk.js": "/react-frekuensi27/static/js/2.8fff74ed.chunk.js",
-    "static/js/2.8fff74ed.chunk.js.map": "/react-frekuensi27/static/js/2.8fff74ed.chunk.js.map",
+    "static/js/2.20a61ae9.chunk.js": "/react-frekuensi27/static/js/2.20a61ae9.chunk.js",
+    "static/js/2.20a61ae9.chunk.js.map": "/react-frekuensi27/static/js/2.20a61ae9.chunk.js.map",
     "static/js/3.e991383a.chunk.js": "/react-frekuensi27/static/js/3.e991383a.chunk.js",
     "static/js/3.e991383a.chunk.js.map": "/react-frekuensi27/static/js/3.e991383a.chunk.js.map",
     "index.html": "/react-frekuensi27/index.html",
-    "static/css/main.ec52af80.chunk.css.map": "/react-frekuensi27/static/css/main.ec52af80.chunk.css.map",
-    "static/js/2.8fff74ed.chunk.js.LICENSE.txt": "/react-frekuensi27/static/js/2.8fff74ed.chunk.js.LICENSE.txt",
+    "static/css/main.f1ba09b2.chunk.css.map": "/react-frekuensi27/static/css/main.f1ba09b2.chunk.css.map",
+    "static/js/2.20a61ae9.chunk.js.LICENSE.txt": "/react-frekuensi27/static/js/2.20a61ae9.chunk.js.LICENSE.txt",
     "static/media/Base.28b82fe7.svg": "/react-frekuensi27/static/media/Base.28b82fe7.svg",
     "static/media/Blop.32f455cb.svg": "/react-frekuensi27/static/media/Blop.32f455cb.svg",
     "static/media/Blop2.b2117605.svg": "/react-frekuensi27/static/media/Blop2.b2117605.svg",
@@ -20,15 +20,15 @@
     "static/media/Top1.eb34586a.svg": "/react-frekuensi27/static/media/Top1.eb34586a.svg",
     "static/media/Top2.ae449255.svg": "/react-frekuensi27/static/media/Top2.ae449255.svg",
     "static/media/corner.eeab3a1c.svg": "/react-frekuensi27/static/media/corner.eeab3a1c.svg",
-    "static/media/grain2.163e09b2.png": "/react-frekuensi27/static/media/grain2.163e09b2.png",
-    "static/media/index.css": "/react-frekuensi27/static/media/sec0.f0bda35c.jpg",
+    "static/media/grain2.7e7f218d.png": "/react-frekuensi27/static/media/grain2.7e7f218d.png",
+    "static/media/index.css": "/react-frekuensi27/static/media/sec0.497508b5.jpg",
     "static/media/x-group.22669647.svg": "/react-frekuensi27/static/media/x-group.22669647.svg",
     "static/media/x.06762831.svg": "/react-frekuensi27/static/media/x.06762831.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.80feef7c.js",
-    "static/js/2.8fff74ed.chunk.js",
-    "static/css/main.ec52af80.chunk.css",
-    "static/js/main.d7788c1e.chunk.js"
+    "static/js/2.20a61ae9.chunk.js",
+    "static/css/main.f1ba09b2.chunk.css",
+    "static/js/main.a650928f.chunk.js"
   ]
 }
