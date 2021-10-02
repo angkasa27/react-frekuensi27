@@ -25,5 +25,9 @@ body {
 }
 
 .h1 {
-  @apply text-xl md:text-2xl font-black font-work;
+  @apply text-xl md:text-3xl font-black font-work;
+}
+
+.bg-glass {
+  backdrop-filter: blur(3px);
 }
