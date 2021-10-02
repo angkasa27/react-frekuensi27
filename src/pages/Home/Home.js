@@ -245,7 +245,7 @@ export function Logo({ done }) {
     <div
       onClick={() => openMenu(open)}
       className={
-        "transition cursor-pointer duration-500 ease-in-out transform hover:rotate-3 hover:scale-110 hover:bg-white hover:bg-opacity-10 w-56 h-56 flex justify-center items-center rounded-full " +
+        "transition cursor-pointer duration-500 ease-in-out transform hover:rotate-3 hover:scale-110 hover:bg-white hover:bg-opacity-10 w-28 h-28 md:w-56 md:h-56 flex justify-center items-center rounded-full " +
         logoClass
       }
     >
@@ -269,8 +269,8 @@ export function Logo({ done }) {
           logoText[0]
         }
       >
-        <Event className="w-12 h-12 text-white" />
-        <p className="text-xs md:text-sm mt-2 text-white font-code">
+        <Event className="w-8 h-8 text-white" />
+        <p className="hidden md:block text-sm mt-2 text-white font-code">
           reunion.txt
         </p>
       </div>
@@ -281,8 +281,8 @@ export function Logo({ done }) {
           logoText[1]
         }
       >
-        <YearBook className="w-12 h-12 text-white" />
-        <p className="text-xs md:text-sm mt-2 text-white font-code">
+        <YearBook className="w-8 h-8 text-white" />
+        <p className="hidden md:block text-sm  mt-2 text-white font-code">
           yearbook.pdf
         </p>
       </div>
