@@ -157,7 +157,7 @@ export function Sect1() {
       </div>
       <div className="z-10 flex md:flex-col justify-center items-center absolute inset-x-1/2 bottom-16 md:-right-1/3 md:inset-y-1/2 md:my-3 ">
         <a
-          href="https://instagram.com/frekuensi27_"
+          href="https://blog.moklet.io"
           target="_blank"
           rel="noopener noreferrer"
           className="relative p-1 transition duration-100 hover:bg-white hover:bg-opacity-20 rounded-lg mr-6 md:mr-0 md:mb-6"
