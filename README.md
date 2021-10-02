@@ -1,3 +1,3 @@
 # Frekuensi27 Web Portal Project
 
-[Click Here](react-frekuensi27) To see the result
+[Click Here](https://angkasa27.github.io/react-frekuensi27) To see the result
