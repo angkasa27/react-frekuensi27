@@ -66,10 +66,9 @@ module.exports = {
           "80%": { transform: "translate(3%, -13%)  scale(1.5)" },
           "90%": { transform: "translate(-5%, 5%) scale(1.5)" },
         },
-        smooth: {
-          "0%": { transform: "scale(0)" },
-          "70%": { transform: "scale(0)" },
-          "100%": { transform: "scale(1)" },
+        out: {
+          "0%": { transform: "translate(0, 0)" },
+          "100%": { transform: "translate(-110vw, 0)" },
         },
         line: {
           "0%": { transform: "translate(-8rem, 0) scale(0)" },
@@ -81,9 +80,9 @@ module.exports = {
         },
       },
       animation: {
-        blink: "blink .5s ease-in-out",
+        blink: "blink .5s linear",
+        out: "out .5s linear",
         grain: "grain .5s steps(10) infinite",
-        smooth: "smooth .5s linear",
         line: "line .2s linear",
         lineReverse: "lineReverse .2s linear",
         lineOut: "line .2s linear reverse",

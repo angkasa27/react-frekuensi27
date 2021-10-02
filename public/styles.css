@@ -33181,37 +33181,27 @@ video {
   }
 }
 
-@-webkit-keyframes smooth{
+@-webkit-keyframes out{
   0%{
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-
-  70%{
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
   }
 
   100%{
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: translate(-110vw, 0);
+            transform: translate(-110vw, 0);
   }
 }
 
-@keyframes smooth{
+@keyframes out{
   0%{
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-
-  70%{
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
   }
 
   100%{
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: translate(-110vw, 0);
+            transform: translate(-110vw, 0);
   }
 }
 
@@ -33289,18 +33279,18 @@ video {
 }
 
 .animate-blink{
-  -webkit-animation: blink .5s ease-in-out;
-          animation: blink .5s ease-in-out;
+  -webkit-animation: blink .5s linear;
+          animation: blink .5s linear;
+}
+
+.animate-out{
+  -webkit-animation: out .5s linear;
+          animation: out .5s linear;
 }
 
 .animate-grain{
   -webkit-animation: grain .5s steps(10) infinite;
           animation: grain .5s steps(10) infinite;
-}
-
-.animate-smooth{
-  -webkit-animation: smooth .5s linear;
-          animation: smooth .5s linear;
 }
 
 .animate-line{
@@ -33347,18 +33337,18 @@ video {
 }
 
 .hover\:animate-blink:hover{
-  -webkit-animation: blink .5s ease-in-out;
-          animation: blink .5s ease-in-out;
+  -webkit-animation: blink .5s linear;
+          animation: blink .5s linear;
+}
+
+.hover\:animate-out:hover{
+  -webkit-animation: out .5s linear;
+          animation: out .5s linear;
 }
 
 .hover\:animate-grain:hover{
   -webkit-animation: grain .5s steps(10) infinite;
           animation: grain .5s steps(10) infinite;
-}
-
-.hover\:animate-smooth:hover{
-  -webkit-animation: smooth .5s linear;
-          animation: smooth .5s linear;
 }
 
 .hover\:animate-line:hover{
@@ -33405,18 +33395,18 @@ video {
 }
 
 .focus\:animate-blink:focus{
-  -webkit-animation: blink .5s ease-in-out;
-          animation: blink .5s ease-in-out;
+  -webkit-animation: blink .5s linear;
+          animation: blink .5s linear;
+}
+
+.focus\:animate-out:focus{
+  -webkit-animation: out .5s linear;
+          animation: out .5s linear;
 }
 
 .focus\:animate-grain:focus{
   -webkit-animation: grain .5s steps(10) infinite;
           animation: grain .5s steps(10) infinite;
-}
-
-.focus\:animate-smooth:focus{
-  -webkit-animation: smooth .5s linear;
-          animation: smooth .5s linear;
 }
 
 .focus\:animate-line:focus{
@@ -65847,18 +65837,18 @@ body {
   }
 
   .sm\:animate-blink{
-    -webkit-animation: blink .5s ease-in-out;
-            animation: blink .5s ease-in-out;
+    -webkit-animation: blink .5s linear;
+            animation: blink .5s linear;
+  }
+
+  .sm\:animate-out{
+    -webkit-animation: out .5s linear;
+            animation: out .5s linear;
   }
 
   .sm\:animate-grain{
     -webkit-animation: grain .5s steps(10) infinite;
             animation: grain .5s steps(10) infinite;
-  }
-
-  .sm\:animate-smooth{
-    -webkit-animation: smooth .5s linear;
-            animation: smooth .5s linear;
   }
 
   .sm\:animate-line{
@@ -65905,18 +65895,18 @@ body {
   }
 
   .sm\:hover\:animate-blink:hover{
-    -webkit-animation: blink .5s ease-in-out;
-            animation: blink .5s ease-in-out;
+    -webkit-animation: blink .5s linear;
+            animation: blink .5s linear;
+  }
+
+  .sm\:hover\:animate-out:hover{
+    -webkit-animation: out .5s linear;
+            animation: out .5s linear;
   }
 
   .sm\:hover\:animate-grain:hover{
     -webkit-animation: grain .5s steps(10) infinite;
             animation: grain .5s steps(10) infinite;
-  }
-
-  .sm\:hover\:animate-smooth:hover{
-    -webkit-animation: smooth .5s linear;
-            animation: smooth .5s linear;
   }
 
   .sm\:hover\:animate-line:hover{
@@ -65963,18 +65953,18 @@ body {
   }
 
   .sm\:focus\:animate-blink:focus{
-    -webkit-animation: blink .5s ease-in-out;
-            animation: blink .5s ease-in-out;
+    -webkit-animation: blink .5s linear;
+            animation: blink .5s linear;
+  }
+
+  .sm\:focus\:animate-out:focus{
+    -webkit-animation: out .5s linear;
+            animation: out .5s linear;
   }
 
   .sm\:focus\:animate-grain:focus{
     -webkit-animation: grain .5s steps(10) infinite;
             animation: grain .5s steps(10) infinite;
-  }
-
-  .sm\:focus\:animate-smooth:focus{
-    -webkit-animation: smooth .5s linear;
-            animation: smooth .5s linear;
   }
 
   .sm\:focus\:animate-line:focus{
@@ -98369,18 +98359,18 @@ body {
   }
 
   .md\:animate-blink{
-    -webkit-animation: blink .5s ease-in-out;
-            animation: blink .5s ease-in-out;
+    -webkit-animation: blink .5s linear;
+            animation: blink .5s linear;
+  }
+
+  .md\:animate-out{
+    -webkit-animation: out .5s linear;
+            animation: out .5s linear;
   }
 
   .md\:animate-grain{
     -webkit-animation: grain .5s steps(10) infinite;
             animation: grain .5s steps(10) infinite;
-  }
-
-  .md\:animate-smooth{
-    -webkit-animation: smooth .5s linear;
-            animation: smooth .5s linear;
   }
 
   .md\:animate-line{
@@ -98427,18 +98417,18 @@ body {
   }
 
   .md\:hover\:animate-blink:hover{
-    -webkit-animation: blink .5s ease-in-out;
-            animation: blink .5s ease-in-out;
+    -webkit-animation: blink .5s linear;
+            animation: blink .5s linear;
+  }
+
+  .md\:hover\:animate-out:hover{
+    -webkit-animation: out .5s linear;
+            animation: out .5s linear;
   }
 
   .md\:hover\:animate-grain:hover{
     -webkit-animation: grain .5s steps(10) infinite;
             animation: grain .5s steps(10) infinite;
-  }
-
-  .md\:hover\:animate-smooth:hover{
-    -webkit-animation: smooth .5s linear;
-            animation: smooth .5s linear;
   }
 
   .md\:hover\:animate-line:hover{
@@ -98485,18 +98475,18 @@ body {
   }
 
   .md\:focus\:animate-blink:focus{
-    -webkit-animation: blink .5s ease-in-out;
-            animation: blink .5s ease-in-out;
+    -webkit-animation: blink .5s linear;
+            animation: blink .5s linear;
+  }
+
+  .md\:focus\:animate-out:focus{
+    -webkit-animation: out .5s linear;
+            animation: out .5s linear;
   }
 
   .md\:focus\:animate-grain:focus{
     -webkit-animation: grain .5s steps(10) infinite;
             animation: grain .5s steps(10) infinite;
-  }
-
-  .md\:focus\:animate-smooth:focus{
-    -webkit-animation: smooth .5s linear;
-            animation: smooth .5s linear;
   }
 
   .md\:focus\:animate-line:focus{
@@ -130891,18 +130881,18 @@ body {
   }
 
   .lg\:animate-blink{
-    -webkit-animation: blink .5s ease-in-out;
-            animation: blink .5s ease-in-out;
+    -webkit-animation: blink .5s linear;
+            animation: blink .5s linear;
+  }
+
+  .lg\:animate-out{
+    -webkit-animation: out .5s linear;
+            animation: out .5s linear;
   }
 
   .lg\:animate-grain{
     -webkit-animation: grain .5s steps(10) infinite;
             animation: grain .5s steps(10) infinite;
-  }
-
-  .lg\:animate-smooth{
-    -webkit-animation: smooth .5s linear;
-            animation: smooth .5s linear;
   }
 
   .lg\:animate-line{
@@ -130949,18 +130939,18 @@ body {
   }
 
   .lg\:hover\:animate-blink:hover{
-    -webkit-animation: blink .5s ease-in-out;
-            animation: blink .5s ease-in-out;
+    -webkit-animation: blink .5s linear;
+            animation: blink .5s linear;
+  }
+
+  .lg\:hover\:animate-out:hover{
+    -webkit-animation: out .5s linear;
+            animation: out .5s linear;
   }
 
   .lg\:hover\:animate-grain:hover{
     -webkit-animation: grain .5s steps(10) infinite;
             animation: grain .5s steps(10) infinite;
-  }
-
-  .lg\:hover\:animate-smooth:hover{
-    -webkit-animation: smooth .5s linear;
-            animation: smooth .5s linear;
   }
 
   .lg\:hover\:animate-line:hover{
@@ -131007,18 +130997,18 @@ body {
   }
 
   .lg\:focus\:animate-blink:focus{
-    -webkit-animation: blink .5s ease-in-out;
-            animation: blink .5s ease-in-out;
+    -webkit-animation: blink .5s linear;
+            animation: blink .5s linear;
+  }
+
+  .lg\:focus\:animate-out:focus{
+    -webkit-animation: out .5s linear;
+            animation: out .5s linear;
   }
 
   .lg\:focus\:animate-grain:focus{
     -webkit-animation: grain .5s steps(10) infinite;
             animation: grain .5s steps(10) infinite;
-  }
-
-  .lg\:focus\:animate-smooth:focus{
-    -webkit-animation: smooth .5s linear;
-            animation: smooth .5s linear;
   }
 
   .lg\:focus\:animate-line:focus{
@@ -163413,18 +163403,18 @@ body {
   }
 
   .xl\:animate-blink{
-    -webkit-animation: blink .5s ease-in-out;
-            animation: blink .5s ease-in-out;
+    -webkit-animation: blink .5s linear;
+            animation: blink .5s linear;
+  }
+
+  .xl\:animate-out{
+    -webkit-animation: out .5s linear;
+            animation: out .5s linear;
   }
 
   .xl\:animate-grain{
     -webkit-animation: grain .5s steps(10) infinite;
             animation: grain .5s steps(10) infinite;
-  }
-
-  .xl\:animate-smooth{
-    -webkit-animation: smooth .5s linear;
-            animation: smooth .5s linear;
   }
 
   .xl\:animate-line{
@@ -163471,18 +163461,18 @@ body {
   }
 
   .xl\:hover\:animate-blink:hover{
-    -webkit-animation: blink .5s ease-in-out;
-            animation: blink .5s ease-in-out;
+    -webkit-animation: blink .5s linear;
+            animation: blink .5s linear;
+  }
+
+  .xl\:hover\:animate-out:hover{
+    -webkit-animation: out .5s linear;
+            animation: out .5s linear;
   }
 
   .xl\:hover\:animate-grain:hover{
     -webkit-animation: grain .5s steps(10) infinite;
             animation: grain .5s steps(10) infinite;
-  }
-
-  .xl\:hover\:animate-smooth:hover{
-    -webkit-animation: smooth .5s linear;
-            animation: smooth .5s linear;
   }
 
   .xl\:hover\:animate-line:hover{
@@ -163529,18 +163519,18 @@ body {
   }
 
   .xl\:focus\:animate-blink:focus{
-    -webkit-animation: blink .5s ease-in-out;
-            animation: blink .5s ease-in-out;
+    -webkit-animation: blink .5s linear;
+            animation: blink .5s linear;
+  }
+
+  .xl\:focus\:animate-out:focus{
+    -webkit-animation: out .5s linear;
+            animation: out .5s linear;
   }
 
   .xl\:focus\:animate-grain:focus{
     -webkit-animation: grain .5s steps(10) infinite;
             animation: grain .5s steps(10) infinite;
-  }
-
-  .xl\:focus\:animate-smooth:focus{
-    -webkit-animation: smooth .5s linear;
-            animation: smooth .5s linear;
   }
 
   .xl\:focus\:animate-line:focus{
@@ -195935,18 +195925,18 @@ body {
   }
 
   .\32xl\:animate-blink{
-    -webkit-animation: blink .5s ease-in-out;
-            animation: blink .5s ease-in-out;
+    -webkit-animation: blink .5s linear;
+            animation: blink .5s linear;
+  }
+
+  .\32xl\:animate-out{
+    -webkit-animation: out .5s linear;
+            animation: out .5s linear;
   }
 
   .\32xl\:animate-grain{
     -webkit-animation: grain .5s steps(10) infinite;
             animation: grain .5s steps(10) infinite;
-  }
-
-  .\32xl\:animate-smooth{
-    -webkit-animation: smooth .5s linear;
-            animation: smooth .5s linear;
   }
 
   .\32xl\:animate-line{
@@ -195993,18 +195983,18 @@ body {
   }
 
   .\32xl\:hover\:animate-blink:hover{
-    -webkit-animation: blink .5s ease-in-out;
-            animation: blink .5s ease-in-out;
+    -webkit-animation: blink .5s linear;
+            animation: blink .5s linear;
+  }
+
+  .\32xl\:hover\:animate-out:hover{
+    -webkit-animation: out .5s linear;
+            animation: out .5s linear;
   }
 
   .\32xl\:hover\:animate-grain:hover{
     -webkit-animation: grain .5s steps(10) infinite;
             animation: grain .5s steps(10) infinite;
-  }
-
-  .\32xl\:hover\:animate-smooth:hover{
-    -webkit-animation: smooth .5s linear;
-            animation: smooth .5s linear;
   }
 
   .\32xl\:hover\:animate-line:hover{
@@ -196051,18 +196041,18 @@ body {
   }
 
   .\32xl\:focus\:animate-blink:focus{
-    -webkit-animation: blink .5s ease-in-out;
-            animation: blink .5s ease-in-out;
+    -webkit-animation: blink .5s linear;
+            animation: blink .5s linear;
+  }
+
+  .\32xl\:focus\:animate-out:focus{
+    -webkit-animation: out .5s linear;
+            animation: out .5s linear;
   }
 
   .\32xl\:focus\:animate-grain:focus{
     -webkit-animation: grain .5s steps(10) infinite;
             animation: grain .5s steps(10) infinite;
-  }
-
-  .\32xl\:focus\:animate-smooth:focus{
-    -webkit-animation: smooth .5s linear;
-            animation: smooth .5s linear;
   }
 
   .\32xl\:focus\:animate-line:focus{

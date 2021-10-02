@@ -1,14 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 export default function ModalBase({ children, open, onClose }) {
-  const classes = !open && 'hidden';
+  const classes = !open && "hidden";
 
   return (
     <div className={classes}>
       <div
         onClick={(e) => {
-          console.log('click');
           e.preventDefault();
           onClose();
         }}

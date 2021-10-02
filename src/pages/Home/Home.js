@@ -19,15 +19,18 @@ export default function Home() {
 
 export function Sect1() {
   const [textClass, setTextClass] = useState(" opacity-0");
+  const [headClass, setHeadClass] = useState(" opacity-0");
+  const [loadClass, setLoadClass] = useState(" ");
   const [grainEff, setGrainEff] = useState(" ");
-  const desc = ["FREKUENSI 27", "MOKLET'S FREQUENCY", "THE LEGEND"];
+  const [image, setImage] = useState(false);
+  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setTextClass(" animate-blink");
-    }, 1800);
-    setGrainEff("animate-grain");
-  }, []);
+  const desc = [
+    "FREKUENSI 27",
+    "MOKLET'S FREQUENCY",
+    "THE LEGEND",
+    "FREKUENSI 27",
+  ];
 
   const blobs = (
     <>
@@ -35,6 +38,7 @@ export function Sect1() {
         draggable="false"
         src={Grain}
         alt=""
+        onLoad={() => setImage(true)}
         className={
           "z-0 absolute top-0 left-0 opacity-80 md:h-auto h-screen " + grainEff
         }
@@ -78,11 +82,55 @@ export function Sect1() {
     </>
   );
 
+  useEffect(() => {
+    if (image) {
+      setLoadClass(" animate-out");
+      setTimeout(() => {
+        setLoadClass(" opacity-0");
+      }, 500);
+      setTimeout(() => {
+        setHeadClass(" animate-blink");
+        setLoading(false);
+      }, 800);
+      setTimeout(() => {
+        setTextClass(" animate-blink");
+      }, 2000);
+    }
+    setGrainEff("animate-grain");
+  }, [image]);
+
+  const load = (
+    <div
+      className={
+        "z-50 w-screen h-screen absolute bg-gray-500 flex justify-center items-center " +
+        loadClass
+      }
+    >
+      {!image && (
+        <p className="text-white h1 mt-8 tracking-widest z-10 ">
+          <ReactTypingEffect
+            speed={50}
+            eraseSpeed={50}
+            typingDelay={200}
+            text={["memuat...", "sabar..."]}
+            cursorRenderer={(cursor) => (
+              <span className="font-thin font-nunito">{cursor}</span>
+            )}
+            displayTextRenderer={(text) => {
+              return text;
+            }}
+          />
+        </p>
+      )}
+    </div>
+  );
+
   return (
     <section id="sec0" className="sec-base relative overflow-hidden">
+      {loading && load}
       <div className="flex flex-col items-center justify-center h-screen">
-        <p className="text-white h1 mb-6 animate-blink z-10">WE ARE</p>
-        <Logo />
+        <p className={"text-white h1 mb-6 z-10" + headClass}>WE ARE</p>
+        <Logo done={image} />
         <p className={"text-white h1 mt-8 tracking-widest z-10 " + textClass}>
           <ReactTypingEffect
             speed={100}
@@ -124,16 +172,17 @@ export function Sect1() {
   );
 }
 
-export function Logo() {
+export function Logo({ done }) {
   const [open, setOpen] = useState(false);
   const [logoClass, setLogoClass] = useState(" opacity-0");
   const [logoText, setLogoText] = useState([" opacity-0", " opacity-0"]);
 
   useEffect(() => {
-    setTimeout(() => {
-      setLogoClass(" animate-blink");
-    }, 1000);
-  }, []);
+    if (done)
+      setTimeout(() => {
+        setLogoClass(" animate-blink");
+      }, 1500);
+  }, [done]);
 
   const openMenu = (v) => {
     if (!v) {
@@ -142,7 +191,6 @@ export function Logo() {
         setLogoText([" ", " "]);
       }, 200);
     } else {
-      console.log("ts");
       setLogoText([" animate-lineReverseOut", " animate-lineOut"]);
       setTimeout(() => {
         setLogoText([" opacity-0", " opacity-0"]);
