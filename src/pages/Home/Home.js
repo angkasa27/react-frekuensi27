@@ -96,12 +96,8 @@ export function Sect1() {
         setLoadClass(" opacity-0");
       }, 500);
       setTimeout(() => {
-        // setHeadClass(" animate-blink");
         setLoading(false);
       }, 800);
-      // setTimeout(() => {
-      //   setTextClass(" animate-blink");
-      // }, 2000);
     }
     setGrainEff("animate-grain");
   }, [image]);
@@ -136,10 +132,8 @@ export function Sect1() {
     <section id="sec0" className="sec-base relative overflow-hidden">
       {loading && load}
       <div className="flex flex-col items-center justify-center h-screen">
-        {/* <p className={"text-white h1 mb-6 z-10" + headClass}>WE ARE</p>  */}
         <p className="text-white h1 mb-6 z-10">WE ARE</p>
         <Logo done={image} />
-        {/* <p className={"text-white h1 mt-8 tracking-widest z-10 " + textClass}>   */}
         <p className="text-white h1 mt-8 tracking-widest z-10 mb-20 md:mb-12">
           <ReactTypingEffect
             speed={100}
@@ -160,7 +154,7 @@ export function Sect1() {
           href="https://blog.moklet.io"
           target="_blank"
           rel="noopener noreferrer"
-          className="relative p-1 transition duration-100 hover:bg-white hover:bg-opacity-20 rounded-lg mr-6 md:mr-0 md:mb-6"
+          className="relative p-3 transition duration-100 main-hover rounded-lg mr-6 md:mr-0 md:mb-6"
         >
           <Web className="w-8 h-8 text-white " />
         </a>
@@ -168,15 +162,16 @@ export function Sect1() {
           href="https://instagram.com/frekuensi27_"
           target="_blank"
           rel="noopener noreferrer"
-          className="relative p-1 transition duration-100 hover:bg-white hover:bg-opacity-20 rounded-lg mr-6 md:mr-0 md:mb-6"
+          className="relative p-3 transition duration-100 main-hover rounded-lg mr-6 md:mr-0 md:mb-6"
         >
           <Instagram className="w-8 h-8 text-white " />
         </a>
         <a
-          href="https://drive.google.com/drive/folders/1EJvtmEEN89cAYJx6qkt71Hy5A3_xE32Q?usp=sharing"
+          // href="https://drive.google.com/drive/folders/1EJvtmEEN89cAYJx6qkt71Hy5A3_xE32Q?usp=sharing"
+          href="/#"
           target="_blank"
           rel="noopener noreferrer"
-          className="relative p-1 transition duration-100 hover:bg-white hover:bg-opacity-20 rounded-lg"
+          className="relative p-3 transition duration-100 main-hover rounded-lg"
         >
           <Archive className="w-8 h-8 text-white " />
           <div className="w-5 h-5 absolute bg-green-400 animate-ping rounded-full -top-1 -right-1" />
@@ -219,7 +214,7 @@ export function Logo({ done }) {
   useEffect(() => {
     if (open) {
       setLogoClass(
-        " transform rotate-3 scale-110 bg-white bg-opacity-10 bg-glass"
+        " transform rotate-3 scale-110 bg-white bg-opacity-10 backdrop-blur-sm"
       );
     } else {
       setLogoClass(" ");
@@ -245,7 +240,7 @@ export function Logo({ done }) {
     <div
       onClick={() => openMenu(open)}
       className={
-        "transition cursor-pointer duration-500 ease-in-out transform hover:rotate-3 hover:scale-110 hover:bg-white hover:bg-opacity-10 w-28 h-28 md:w-56 md:h-56 flex justify-center items-center rounded-full " +
+        "transition cursor-pointer duration-500 ease-in-out transform hover:rotate-3 hover:scale-110 hover:bg-white hover:bg-opacity-10 backdrop-filter hover:backdrop-blur-sm w-28 h-28 md:w-56 md:h-56 flex justify-center items-center rounded-full " +
         logoClass
       }
     >
@@ -265,7 +260,7 @@ export function Logo({ done }) {
       <div
         onClick={() => console.log("tsetse")}
         className={
-          "md:mr-24 mr-10 flex flex-col justify-center items-center transition-colors duration-100 hover:bg-white hover:bg-opacity-20 p-3 rounded-lg " +
+          "md:mr-24 mr-10 flex flex-col justify-center items-center transition-colors duration-100 main-hover p-3 cursor-pointer rounded-lg " +
           logoText[0]
         }
       >
@@ -277,7 +272,7 @@ export function Logo({ done }) {
       {logo}
       <div
         className={
-          "md:ml-24 ml-10 flex flex-col justify-center items-center transition-colors duration-100 hover:bg-white hover:bg-opacity-20 p-3 rounded-lg " +
+          "md:ml-24 ml-10 flex flex-col justify-center items-center transition-colors duration-100 main-hover p-3 cursor-pointer rounded-lg " +
           logoText[1]
         }
       >

@@ -99,6 +99,7 @@ module.exports = {
   variants: {
     extend: {
       animation: ["hover", "focus"],
+      backdropBlur: ["hover", "focus"],
     },
   },
   plugins: [],

@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Mono&family=Nunito&family=Work+Sans&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Nunito, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#sec0 {
+  background: no-repeat center url(./assets/sec0.jpg);
+  background-size: cover;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.sec-base {
+  @apply w-screen h-screen m-0 p-0;
+}
+
+.h1 {
+  @apply text-2xl md:text-3xl font-black font-work;
+}
+
+.main-hover {
+  @apply hover:bg-white hover:bg-opacity-10 backdrop-filter hover:backdrop-blur-sm;
+}
